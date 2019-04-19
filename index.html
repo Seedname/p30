@@ -7,6 +7,7 @@
     background-image: url("https://seedname101.github.io/p30/background.jpg");
       background-repeat: repeat;
       background-size: cover;
+      margin:0;
     }
       .orod{
       color: red;
@@ -97,23 +98,54 @@
       color: white;
       font-size: 20px;
  }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
     </style>
   </head>
   <body>
-    <div class = "title"><img width="200px" height="100px" src = "output-onlinepngtools-1.png"></h1>
-    <div class = "title"><img width="300px" height="50px" src = "byline.png"></h1>
-    <p id = "enjoy">Tip: Don't get too far behind- Deadline: May 1st</p>
- <div id = "container">
-        <a href="https://seedname101.github.io/p30-1/" class="button">About</a>
-    <a href="https://seedname101.github.io/p30-3" class="button">All Topics</a>
-   <a href="https://seedname101.github.io/p30-2" class="button">Format Picker</a>
-   
-    </div>
+
     
+<ul>
+<li><a class="active" href="https://seedname101.github.io/p30">Home</a></li>
+  <li><a href="https://seedname101.github.io/p30-3">All Topics</a></li>
+  <li><a href="https://seedname101.github.io/p30-1">About</a></li>
+  <li><a href="https://seedname101.github.io/p30-2">Format Picker</a></li>
+  <li><a href="https://seedname101.github.io/p30-4">Format Generator</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#1abc9c;">
    <div id = "HT" class = "card"><h2 class = "text">Today's Poem Topic: </h2><h3 class = "text">All or Nothing 4/19/19</h3><h3 class = "text">Format: Haiku</h3><p class = "text">Its All Or Nothing- Literally</p><p class = "orod" class = "text">[(Most Likely) requires two drafts]</p><h6 class = "text">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a> and Mr.Capley</h6></div>
-    <div id = "container1">
-    <a href="https://seedname101.github.io/p30-4/" class="button">Random Poem Format Generator</a>
-    </div>
+</div>
+
          <div class="footer">
   <p><a class = "ema" href="mailto:juliandominguez0415@gmail.com">Contact Me</a></p>
   <p>Made By Julian Dominguez</p>
