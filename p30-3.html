@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30/30 Poem Randomizer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("#clicked").hide();
+    $("#clicked").slideDown();
+  });
+});
+</script>
+    <style>
+      body{
+        background-image: url("https://seedname101.github.io/p30/background.png");
+      background-repeat: repeat;
+      background-size: cover;
+        margin: 0;
+    }
+    .lo{
+      color: white;
+      text-align: center;
+      }
+      #warn{
+      text-align: center;
+      color: red;
+      width: 1050px;
+      }
+    #ccc1{
+        margin: 10px auto 20px;
+    display: block;
+    background-color: white;
+      width: 1050px;
+    }
+      a.ema{
+      color:black;
+      font-weight: bold;
+     }    
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-image: url("https://seedname101.github.io/p30-2/thba.jpg");
+   opacity: 0.7;
+  filter: alpha(opacity=70);          
+   color: black;
+   text-align: left;
+   text-size: 7px;
+   background-size: cover;
+   font-weight: bold;
+}
+        .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#button1 {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#button1:hover {
+  background-color: rgb(178,34,34);
+      }
+#button1:focus {
+  background-color: rgb(128,0,0);    
+}
+ #button1:active {
+      background-color: rgb(128,0,0);  
+      }
+#container1{
+text-align: center;
+}   
+#container{
+text-align: center;
+}
+#clicked{
+color: white;
+font-size: 20px;
+text-align: center;
+
+}
+     ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
+    </style>
+  </head>
+  <body>
+    
+ <ul>
+<li><a class="active" href="https://seedname101.github.io/p30">Home</a></li>
+  <li><a href="https://seedname101.github.io/p30-3">All Topics</a></li>
+  <li><a href="https://seedname101.github.io/p30-1">About</a></li>
+  <li><a href="https://seedname101.github.io/p30-2">Format Picker</a></li>
+  <li><a href="https://seedname101.github.io/p30-4">Format Generator</a></li>
+  <li><img src = "https://seedname101.github.io/p30/byline.png" width="300px" height="40px"></li>
+  <li><a target="" href="">Last Update: 4/19/19; Note: New website look/access</a></li>
+</ul>
+    
+     <div style="padding:20px;margin-top:30px;">
+    <h1 class = "lo">Poetry 30/30 Poem Randomizer</h1>
+    <div id = "ccc1">
+    <h4 id = "warn">This is not the format picker. This is just a randomizer used to pick the format. If you would like to see the format for the day, return to the main menu or click the format picker.</h4>
+    </div>
+     <div id = "container1">
+    <p onmouseover="overFunction()" onclick="myFunction()" id="button1">Click to generate random topic</p>
+    </div><br>
+    <p id = "clicked"></p>
+    </div>
+    
+   <div class="footer">
+  <p><a class = "ema" href="mailto:juliandominguez0415@gmail.com">Contact Me</a></p>
+  <p>Made By Julian Dominguez</p>
+</div>
+    
+    <script type = "text/javascript">
+function myFunction(){
+var a = "Quatrain";
+var b = "Sonnet";
+var c = "Haiku";
+var d = "Cacophony";
+var e = "Pantoum";
+var f = "Sestina";
+var g = "Elegy";
+var h = "Ode";
+var i = "Ghazal";
+var j = "Terza Rima";
+var k = "Prose Poem";
+var l = "Tercet";
+var m = "Villanelle";
+var n = "Free Verse";
+var o = Math.floor(Math.random() * 14);
+if(o === 0){
+document.getElementById("clicked").innerHTML = a;
+}
+if(o === 1){
+document.getElementById("clicked").innerHTML = b;
+}
+if(o === 2){
+document.getElementById("clicked").innerHTML = c;
+}     
+if(o === 3){
+document.getElementById("clicked").innerHTML = d;
+}     
+if(o === 4){
+document.getElementById("clicked").innerHTML = e;
+}
+if(o === 5){
+document.getElementById("clicked").innerHTML = f;
+} 
+if(o === 6){
+document.getElementById("clicked").innerHTML = g;
+}     
+if(o === 7){
+document.getElementById("clicked").innerHTML = h;
+}
+if(o === 8){
+document.getElementById("clicked").innerHTML = i;
+}       
+if(o === 9){
+document.getElementById("clicked").innerHTML = j;
+}     
+if(o === 10){
+document.getElementById("clicked").innerHTML = k;
+}
+if(o === 11){
+document.getElementById("clicked").innerHTML = l;
+}       
+if(o === 12){
+document.getElementById("clicked").innerHTML = m;
+}
+if(o === 13){
+document.getElementById("clicked").innerHTML = n;
+}       
+      }
+
+    </script>
+  </body>
+</html>
