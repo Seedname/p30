@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Poem Format Picker</title> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("#poem").click(function(){
+    $("#para").hide();
+    $("#para").slideDown(800);
+  });
+});
+</script>
+      <style>
+      body{
+        background-image: url("https://seedname101.github.io/p30/background.png");
+      background-repeat: repeat;
+      background-size: cover;
+       margin: 0;
+    }
+      #title{
+      color: white;
+      text-align:center;
+      }
+       #container1{
+       text-align:center;
+       }
+      .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+      #container{
+      text-align: center;
+       color: white;
+      }
+      #b1{
+      color: white;
+      text-decoration: none; 
+      }
+  #poem{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+       }
+  #poem:hover {
+  background-color: rgb(178,34,34);
+      }
+#poem:focus {
+  background-color: rgb(128,0,0);    
+       }
+#poem:active {
+      background-color: rgb(128,0,0);  
+}
+       #para{
+        visibility: hidden;
+       color:white;
+        text-align: center;
+       }
+       a.ll{
+       color: red;
+       }
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-image: url("https://seedname101.github.io/p30-2/thba.jpg");
+   opacity: 0.7;
+  filter: alpha(opacity=70);          
+   color: black;
+   text-align: left;
+   text-size: 7px;
+   background-size: cover;
+   font-weight: bold;
+}
+       .te{
+       opacity: 1;
+        filter: alpha(opacity=100);          
+        color: black;
+        text-align: left;
+        text-size: 7px;
+        font-weight: bold;
+       }
+      a.ema{
+      color:black;
+      font-weight: bold;
+      }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
+    </style>
+</head>
+ <body>
+
+  <ul>
+<li><a class="active" href="https://seedname101.github.io/p30">Home</a></li>
+  <li><a href="https://seedname101.github.io/p30-3">All Topics</a></li>
+  <li><a href="https://seedname101.github.io/p30-1">About</a></li>
+  <li><a href="https://seedname101.github.io/p30-2">Format Picker</a></li>
+  <li><a href="https://seedname101.github.io/p30-4">Format Generator</a></li>
+  <li><img src = "https://seedname101.github.io/p30/byline.png" width="300px" height="40px"></li>
+  <li><a target="" href="">LAST DAY</a></li>
+</ul>
+  <div style="padding:20px;margin-top:30px;">
+   <h1 id = "container">Poetry Format Picker</h1>
+  <div id = "container1">
+  <p id="poem" onclick="myFunction()"><span id = "b1">Click Here To Select Poetry Format(4/30/19)</span>
+  </p>
+  </div>
+<p align="center" id = "para"><br>Choose 1/5 of the types of tercets you want to do. If you choose haiku, make sure you do four, interconnected! Click <a class = "ll" href = "https://literarydevices.net/tercet/" target="_blank">here</a> to learn more about tercets. You can also use the image below as a reference. (It is clickable)<br><br><a target="_blank" href = "5F816051-B925-47D6-A89E-F45E989A1894.jpeg"><img src = "5F816051-B925-47D6-A89E-F45E989A1894.jpeg" height="250px" width="375px"></a></p>
+  </div>
+   <div class="footer">
+  <span class = "te">
+  <p><a class = "ema" href="mailto:juliandominguez0415@gmail.com">Contact Me</a></p>
+  <p>Made By Julian Dominguez</p>
+  </span>
+</div>
+  
+  <script type = "text/javascript">
+function myFunction() {
+ document.getElementById("b1").innerHTML = "Poem Format For The Last Day: Tercet";
+ document.getElementById("poem").innerHTML = "Poem Format For The Last Day: Tercet";
+ document.getElementById("para").style.visibility = "visible"; 
+ document.getElementById("para").style.textAlign = "center"; 
+ document.title = 'Tercet';
+
+}
+  </script>
+  
+ </body>
+ 
+ 
+
+
+
+</html>
