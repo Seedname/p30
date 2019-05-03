@@ -14,132 +14,90 @@
   });
 </script>
     <style>
-    body{
-    background-image: url("https://seedname101.github.io/p30/background.png");
-      background-repeat: repeat;
-      background-size: cover;
-      margin:0;
-    }
-      #orod{
-      color: red;
-      text-align: center;
+      body{
+      background-color: #E3E3E3;
       }
-    .card{
-        margin: 10px auto 20px;
-    display: block;
-        background-image: url("https://poetry3030.com/thba.jpg");
-      background-repeat: repeat;
-      background-size: cover;
-      width: 400px;
-    }
-      .text{
-     text-align:center;
-    color: black;
-     width: 400px;
-      }
-      .title{
-      text-align: center;
-      }
-      div.title{
-       display:block;
-       margin-left: auto;
-       margin-right: auto;
-      }
-      #container{
-      text-align: center;
-      }
-   #container1{
-      text-align: center;
-      }
-      #b{
-      color: red;
-      }
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-image: url("https://poetry3030.com/thba.jpg");
-   opacity: 0.7;
-  filter: alpha(opacity=70);          
-   color: black;
-   text-align: left;
-   text-size: 7px;
-   background-size: cover;
-   font-weight: bold;
-}
-       .te{
-       opacity: 1;
-        filter: alpha(opacity=100);          
-        color: black;
-        text-align: left;
-        text-size: 7px;
-        font-weight: bold;
-       }
-          a.ema{
-      color:black;
-      font-weight: bold;
-      }
-
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar {
   overflow: hidden;
   background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
-li {
+.navbar a {
   float: left;
-  color: white;
-}
-
-li a {
-  display: block;
+  font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-.active {
-  background-color: #4CAF50;
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
-#im1{
-   background-color: rgb(255, 255, 255, 0.7);   
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
     </style>
   </head>
   <body>
 
-    
-<ul>
-<li><a class="active" href="https://poetry3030.com/">Home</a></li>
-  <li><a href="p30-2.html">All Topics</a></li>
-  <li><a href="p30.html">About</a></li>
-  <li><a href="p30-1.html">Format Picker</a></li>
-  <li><a href="p30-3.html">Format Generator</a></li>
-  <li><img src = "byline.png" width="300px" height="40px"></li>
-  <li><a target="" href="">LAST DAY</a></li>
-</ul>
-
-<div style="padding:20px;margin-top:30px;">
-  <div class = "title"><img id = "im1" width="200px" height="100px" src = "output-onlinepngtools-1.png"></h1>
-   <div id = "TPSL" class = "card"><h2 class = "text">Today's Poem Topic:</h2><h3 class = "text">Standing in line 4/30/19</h3><h3 class = "text">Format: <a target="_blank" href="https://literarydevices.net/tercet/">Tercet</a></h3><p class = "text">Waiting and waiting</p><p id = "orod" class = "text">[Requires One Draft]</p><h6 class = "text">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a> and Mr.Capley</h6></div>   
+<div class="navbar">
+  <a href="https://poetry3030.com">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Poetry Tools
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://poetry3030.com/p30">About</a>
+      <a href="https://poetry3030.com/p30-1">Format Description</a>
+      <a href="https://poetry3030.com/p30-2">All Topics</a>
+      <a href="https://poetry3030.com/p30-3">Random Format Generator</a>
+    </div>
+  </div> 
 </div>
 
-         <div class="footer">
-  <p><a class = "ema" href="mailto:juliandominguez0415@gmail.com">Contact Me</a></p>
-  <p>Made By Julian Dominguez</p>
-</div>
+
+
+
     <script text="type/javascript">
     if(screen.width <= 699){
     document.location = "https://poetry3030.com/mobile.html";
