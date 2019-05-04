@@ -2,6 +2,7 @@
 
 <html> 
  <head>
+    <link rel="shortcut icon" href="art.ico" />
     <title>Format Description</title> 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
@@ -16,65 +17,115 @@ $(document).ready(function(){
       body{
       background-color: #E3E3E3;
     }
-       .navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+  /*RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+/*MAIN*/
+body { 
+	font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	background: #f9f9f9;
+	color: #E3E3E3;
+      }
+a {
+	color: #4C9CF1;
+	text-decoration: none;
+	font-weight: bold;
 }
-
-.dropdown {
-  float: left;
-  overflow: hidden;
+a:hover {
+	color: #444;
 }
-
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+img {
+	width: 100%;
 }
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+header {
+	background: #fff;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #4C9CF1;
+	z-index: 100;
+      }
+#logo{
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url(../img/logo.png) no-repeat center;
+	display: block;
 }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+nav {
+	float: right;
+	padding: 20px;	
+      }
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url("https://poetry3030.com/meico.png") center;
+      }
+a:hover#menu-icon {
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
 }
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+ul {
+	list-style: none;
 }
-
-.dropdown-content a:hover {
-  background-color: #ddd;
+li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+      }
+.current {
+	color: #2262AD;
 }
-
-.dropdown:hover .dropdown-content {
-  display: block;
+section {
+	margin: 80px auto 40px;
+	max-width: 980px;
+	position: relative;
+	padding: 20px
 }
+h1 {
+	font-size: 2em;
+	color: #2262AD;
+	line-height: 1.15em;
+	margin: 20px 0 ;
+}
+p {
+	line-height: 1.45em;
+	margin-bottom: 20px;
+}
+	    /*MEDIA QUERY*/
+@media only screen and (max-width : 700px) {
+	header {
+		position: absolute;
+	}
+	#menu-icon {
+		display:inline-block;
+	}
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav:hover ul {
+		display: block;
+	}
       #title{
       color: white;
       text-align:center;
@@ -136,28 +187,26 @@ $(document).ready(function(){
 </head>
  <body>
 
-
-<div class="navbar">
-  <a href="https://poetry3030.com">Home</a>
-  <div class="dropdown">
-    <button class="dropbtn">Poetry Tools
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://poetry3030.com/p30">About</a>
-      <a href="https://poetry3030.com/p30-1">Format Description</a>
-      <a href="https://poetry3030.com/p30-2">All Topics</a>
-      <a href="https://poetry3030.com/p30-3">Random Format Generator</a>
-    </div>
-  </div> 
-</div>
-
+<header>
+<a href="https://poetry3030.com" id="logo">Poetry 30/30<br><br>Homepage</a>
+<nav>
+<a href="#" id="menu-icon"></a>
+<ul>
+<li><a href="https://poetry3030.com" class="current">Home</a></li>
+<li><a href="https://poetry3030.com/p30.html">About</a></li>
+<li><a href="https://poetry3030.com/p30-1.html">Format Description</a></li>
+<li><a href="https://poetry3030.com/p30-2.html">All Topics</a></li>
+<li><a href="https://poetry3030.com/p30-3.html">Random Format Generator</a></li>
+</ul>
+</nav>
+</header>
+<section>
   <div id = "container1">
-  <p id="poem" onclick="myFunction()"><span id = "b1">Click Here To Select Poetry Format(4/30/19)</span>
+  <p id="poem" onclick="myFunction()"><span id = "b1">Click Here To Select Poetry Format</span>
   </p>
   </div>
 <p align="center" id = "para"><br>Choose 1/5 of the types of tercets you want to do. If you choose haiku, make sure you do four, interconnected! Click <a class = "ll" href = "https://literarydevices.net/tercet/" target="_blank">here</a> to learn more about tercets. You can also use the image below as a reference. (It is clickable)<br><br><a target="_blank" href = "https://seedname101.github.io/p30-2/5F816051-B925-47D6-A89E-F45E989A1894.jpeg"><img src = "https://seedname101.github.io/p30-2/5F816051-B925-47D6-A89E-F45E989A1894.jpeg" height="250px" width="375px"></a></p>
- 
+  </section>
   
   <script type = "text/javascript">
        if(screen.width <= 699){
@@ -180,3 +229,10 @@ function myFunction() {
 
 
 </html>
+
+
+
+
+
+
+  
