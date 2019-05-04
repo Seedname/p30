@@ -14,68 +14,107 @@
   });
 </script>
     <style>
-      body{
-      background-color: #E3E3E3;
+/*RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/*MAIN*/
+body { 
+	font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	background: #f9f9f9;
+	color: #E3E3E3;
       }
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+a {
+	color: #4C9CF1;
+	text-decoration: none;
+	font-weight: bold;
 }
-.topnav #myLinks {
-  display: none;
+a:hover {
+	color: #444;
 }
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+img {
+	width: 100%;
 }
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+header {
+	background: #fff;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #4C9CF1;
+	z-index: 100;
+      }
+#logo{
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url(../img/logo.png) no-repeat center;
+	display: block;
 }
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+nav {
+	float: right;
+	padding: 20px;	
+      }
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url(../img/menu-icon.png) center;
+      }
+a:hover#menu-icon {
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
 }
-.active {
-  background-color: #4CAF50;
-  color: white;
+ul {
+	list-style: none;
+}
+li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+      }
+.current {
+	color: #2262AD;
+}
+section {
+	margin: 80px auto 40px;
+	max-width: 980px;
+	position: relative;
+	padding: 20px
+}
+h1 {
+	font-size: 2em;
+	color: #2262AD;
+	line-height: 1.15em;
+	margin: 20px 0 ;
+}
+p {
+	line-height: 1.45em;
+	margin-bottom: 20px;
 }
     </style>
   </head>
   <body>
-
-<div class="topnav">
-  <a href="https://poetry3030.com/mobile.html" class="active">Poetry 30/30 Homepage</a>
-  <div id="myLinks">
-    <a href="https://poetry3030.com/m.html">About</a>
-    <a href="https://poetry3030.com/m1.html">Format Description</a>
-    <a href="https://poetry3030.com/m2.html">All Topics</a>
-    <a href="https://poetry3030.com/m3.html">Random Format Generator</a>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div><div style="padding-left:16px">
-
-
-
-  </div>  <script text="type/javascript">
-  function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-    }
+<header>
+<a href="https://poetry3030.com" id="logo">Poetry 30/30</a>
+<nav>
+<a href="#" id="menu-icon"></a>
+<ul>
+<li><a href="https://poetry3030.com" class="current">Home</a></li>
+<li><a href="https://poetry3030.com/m1.html">Format Description</a></li>
+<li><a href="https://poetry3030.com/m2.html">All Topics</a></li>
+<li><a href="https://poetry3030.com/m3.html">Random Format Generator</a></li>
+</ul>
+</nav>
+</header>
+    <section>
+    
+    </section>
+  <script text="type/javascript">
+ 
     </script>
   </body>
   
