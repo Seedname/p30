@@ -85,13 +85,21 @@ section {
 	margin: 80px auto 40px;
 	max-width: 980px;
 	position: relative;
-	padding: 20px
+	padding: 20px;
+	width: 80%;
+	height: 100%;
+	background-image: url("https://poetry3030.com/background1.jpg");
 }
 h1 {
 	font-size: 2em;
 	color: #2262AD;
 	line-height: 1.15em;
 	margin: 20px 0 ;
+}
+p {
+	line-height: 1.45em;
+	margin-bottom: 20px;
+	color: black;
 }
     #ccc1{
         margin: 10px auto 20px;
@@ -183,7 +191,28 @@ text-align: center;
 	nav:hover ul {
 		display: block;
 	}
- 
+	    }
+	    .sidenav {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+	background-image: url("https://poetry3030.com/background1.jpg");
+  overflow-x: hidden;
+  padding-top: 76px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #4C8FEC;
+  display: block;
+}
+.sidenav a:hover {
+  color: blue;
+}
     </style>
   </head>
   <body>
@@ -200,8 +229,15 @@ text-align: center;
 </ul>
 </nav>
 </header><section>
-    
-    
+    <div class="sidenav">
+  <a href="mailto:juliandominguez0415@gmail.com">Contact Me</a>
+  <a href="https://poetry3030.com/mobile.html">Mobile Site</a>
+  <a href="https://poetry3030.com/p30-4">All Format Descriptions</a>
+  <a href="http://3030poetry.com/">Source</a>
+</div>
+    	    <h1>Random Format Generator</h1>
+	    <p>Use this tool to select a random format. This is not the format for the day, however.</p>
+
      <div id = "container1">
     <p onmouseover="overFunction()" onclick="myFunction()" id="button1">Click to generate random topic</p>
     </div><br>
