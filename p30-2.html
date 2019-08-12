@@ -286,7 +286,7 @@ p {
     </section>
 	  <script text = "type/javascript">
 	  element.addEventListener("next", addFunction);
-	var addfunc = 0;
+	
 	document.getElementById("DAY1").style.visibility = "visible";
 	document.getElementById("DAY2").style.visibility = "hidden";
 	document.getElementById("DAY3").style.visibility = "hidden";
@@ -317,9 +317,10 @@ p {
 	document.getElementById("DAY28").style.visibility = "hidden";
 	document.getElementById("DAY29").style.visibility = "hidden";
 	document.getElementById("DAY30").style.visibility = "hidden";
+		  
 	function addFunction() {
+	var addfunc = 0;
 	addfunc += 1;
-}
 	if(addfunc == 0){
 	document.getElementById("DAY1").style.visibility = "visible";
 	document.getElementById("DAY2").style.visibility = "hidden";
@@ -386,6 +387,8 @@ p {
 	document.getElementById("DAY30").style.visibility = "hidden
 	document.getElementById("DAY30").innerHTML = "April 2nd, 2019";
 		  }
+}
+	
 	  </script>
   </body>
 </html>
