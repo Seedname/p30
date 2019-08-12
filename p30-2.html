@@ -173,8 +173,47 @@ p {
 	    #orod{
 	    color: red;
 	    }
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #2262AD;}
     </style>
+	  <script src="jquery-3.4.1.min.js"></script>
+	  <script>
+	  $("").click(function() {
+  	  $().hide();
+});
+	  </script>
 </head>
   <body>
 
@@ -198,8 +237,44 @@ p {
   <a href="http://3030poetry.com/">Source</a>
 </div>
 	        <h1>All Topics</h1>
-	    <p>When it's time for Poetry 30/30, you'll see all of the topics and formats for the month here!</p>
-<div class = "allPoetry30">
+	    <p>Select a date or show all to see poem cards.</p>
+	    <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <div id = "LINK1">4/1/19</div>
+    <div id = "LINK2">4/2/19</div>
+    <div id = "#LINK3>4/3/19</div>
+    <div id = "LINK4">4/4/19</div>
+    <div id = "LINK5">4/5/19</div>
+    <div id = "#LINK6>4/6/19</div>
+    <div id = "LINK7">4/7/19</div>
+    <div id = "LINK8">4/8/19</div>
+    <div id = "#LINK9>4/9/19</div>
+    <div id = "LINK10">4/10/19</div>
+    <div id = "LINK11">4/11/19</div>
+    <div id = "#LINK12>4/12/19</div>
+    <div id = "LINK13">4/13/19</div>
+    <div id = "LINK14">4/14/19</div>
+    <div id = "#LINK15>4/15/19</div>
+    <div id = "LINK16">4/16/19</div>
+    <div id = "LINK17">4/17/19</div>
+    <div id = "#LINK18>4/18/19</div>
+    <div id = "LINK19">4/19/19</div>
+    <div id = "LINK20">4/20/19</div>
+    <div id = "#LINK21>4/21/19</div>
+    <div id = "LINK22">4/22/19</div>
+    <div id = "LINK23">4/23/19</div>
+    <div id = "#LINK24">4/24/19</div>	
+    <div id = "#LINK25>4/25/19</div>
+    <div id = "LINK26">4/26/19</div>
+    <div id = "LINK27">4/27/19</div>
+    <div id = "#LINK28">4/28/19</div>
+    <div id = "LINK29">4/29/19</div>
+    <div id = "LINK30">4/30/19</div>
+  </div>
+</div>
+	    <!--
+<div id = "allPoetry30">
     
        <div id = "DAY30" class = "card"><h2 class = "text">Last Poem Topic:</h2><h3 class = "text">Standing in line 4/30/19</h3><h3 class = "text">Format: <a target="_blank" href="https://literarydevices.net/tercet/">Tercet</a></h3><p class = "text">Waiting and waiting</p><p id = "orod" class = "text">[Requires One Draft]</p><h6 class = "text">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a> and Mr.Capley</h6></div>   
        <br>
@@ -260,7 +335,7 @@ p {
 <div id = "DAY2" class = "card"><h2 class = "text">Poem Topic: </h2><h3 class = "text">Up in the Air 4/2/19</h3><h3 class = "text">Format: None</h3><p class = "text">Are You There<br>Or is it your wish<br>To Fly high in the air</p><h6 class = "text">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a> and Mr.Capley</h6></div>
     <br>
  <div id = "DAY1" class = "card"><h2 class = "text">Poem Topic: </h2><h3 class = "text">Streets at Dawn 4/1/19</h3><h3 class = "text">Format: None</h3><p class = "text">This poem is beautiful with imagery.</p><h6 class = "text">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a> and Mr.Capley</h6></div>
-	    </div>
+	    </div>-->
 <br><br><br><br><br>
     </section>
 
