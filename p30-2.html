@@ -223,10 +223,9 @@ $("DAY28").hide();
 $("DAY29").hide();
 $("DAY30").hide();
 var add = "1"
-$(document).ready(function(){
-  $("#next").click(function(){
-    add += 1;
-  });
+$( "#next" ).click(function() {
+  $( this ).slideUp();
+});
 });
 if(add == 1){
 window.console&&console.log('add is 1');
@@ -241,7 +240,7 @@ window.console&&console.log('add is 2');
 <header>
 <a href="https://poetry3030.com" id="logo">Poetry 30/30<br><br>All Topics</a>
 <nav>
-<a href="#" id="menu-icon"></a>
+<a href="" id="menu-icon"></a>
 <ul>
 <li><a href="https://poetry3030.com">Home</a></li>
 <li><a href="https://poetry3030.com/p30.html">About</a></li>
@@ -260,9 +259,9 @@ window.console&&console.log('add is 2');
 	        <h1>All Topics</h1>
 	    <p>You can use this tool to find the topic for a poem in a day in April.</p>
 <div id = "wrapper">
-	<button id = "prev" class="button">Prev</button>
+	<div id = "prev"><button class="button">Prev</button></div>
 	<button id = "datemid" class="button">April 1st, 2019</button>
-	<button id = "next" class="button">Next</button>
+	<div id = "next"><button class="button">Next</button><div>
 	    </div>	    
 <div id = "allPoetry30">
     
