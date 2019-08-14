@@ -244,9 +244,9 @@ p {
 	        <h1>All Topics</h1>
 	    <p>You can use this tool to find the topic for a poem in a day in April.</p>
 
-	<button id = "prev" class="button">Prev</button>
-	<button id = "datemid" class="button">April 1st, 2019</button>
-	<button id = "next" class="button" onclick="addFunction()">Next</button>
+	<div id = "prev"><button id = "prev" class="button">Prev</button></div>
+	<div><button id = "datemid" class="button">April 1st, 2019</button></div>
+	<div><button id = "next" class="button" onclick="addFunction()">Next</button></div> 
 	   
 <div id = "allPoetry30">
   <!--  
@@ -315,9 +315,14 @@ p {
 	<script text = "type/javascript">
 	var adfun = 0;
 	document.getElementById("next").addEventListener("click", addFunction);
+	if(adfun == 0){
+	document.getElementById("text2").innerHTML = "Streets at Dawn 4/1/19";
+	document.getElementById("text3").innerHTML = "Format: None";
+	document.getElementById("text4").innerHTML = "This poem is beautiful with imagery";
+	document.getElementById("orod").innerHTML = "";
+	}
 	function addFunction(){
 	adfun += 1;
-	}
 	if(adfun == 0){
 	document.getElementById("text2").innerHTML = "Streets at Dawn 4/1/19";
 	document.getElementById("text3").innerHTML = "Format: None";
@@ -331,6 +336,9 @@ p {
 	document.getElementById("orod").innerHTML = "";
 	console.log("adfun is 2!!!");
 	}
+	}
+
+
 	</script>
   </body>
 </html>
