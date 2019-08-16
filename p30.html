@@ -7,7 +7,7 @@
       body{
       background-color: #E3E3E3;
     }
-        /*RESET*/
+/*RESET*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
 /*MAIN*/
 body { 
@@ -31,7 +31,7 @@ img {
 header {
 	background: #fff;
 	width: 100%;
-	height: 76px;
+	height: 120px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -43,17 +43,21 @@ header {
 	float: left;
 	width: 200px;
 	height: 40px;
+	font-size: 30px;
 	background: url(../img/logo.png) no-repeat center;
 	display: block;
 }
 nav {
 	float: right;
 	padding: 20px;	
-      }
+	    }
+	    nav a{
+	    font-size: 25px;
+	    }
 #menu-icon {
 	display: hidden;
-	width: 40px;
-	height: 40px;
+	width: 80px;
+	height: 80px;
 	background: #4C8FEC url("https://poetry3030.com/meico.png") center;
       }
 a:hover#menu-icon {
@@ -76,23 +80,37 @@ section {
 	max-width: 980px;
 	position: relative;
 	padding: 20px;
-	width: 80%;
+	width: 70%;
 	height: 100%;
 	background-image: url("https://poetry3030.com/background1.jpg");
 }
 h1 {
-	font-size: 2em;
+	font-size: 3em;
 	color: #2262AD;
 	line-height: 1.15em;
 	margin: 20px 0 ;
+}
+h2 {
+	font-size: 2.3em;
+	color: #2262AD;
+	line-height: 1.15em;
+	margin: 20px 0 ;
+}
+h3 {
+	font-size: 1.6em;
+	color: #dcc223;
+	line-height: 1.15em;
+	margin: 20px 0 ;
+}
+h6{
+	color: black; 
 }
 p {
 	line-height: 1.45em;
 	margin-bottom: 20px;
 	color: black;
+	font-size: 20px;
 }
-	    /*MEDIA QUERY*/
-@media only screen and (max-width : 700px) {
 	header {
 		position: absolute;
 	}
@@ -119,23 +137,22 @@ p {
 	nav:hover ul {
 		display: block;
 	}
-	    }
 .sidenav {
   height: 100%;
-  width: 10%;
+  width: 15%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: white;
   overflow-x: hidden;
-  padding-top: 76px;
+  padding-top: 120px;
   border: 2px solid #000000;
 }
 .sidenav a {
   padding: 8px 10px 8px 18px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   color: #4C9CF1;
   display: block;
 }
@@ -147,7 +164,7 @@ p {
   <body>
 
 <header>
-<a href="https://poetry3030.com" id="logo">Poetry 30/30<br>Format Generator</a>
+<a href="https://poetry3030.com" id="logo">Poetry 30/30<br><br>About</a>
 <nav>
 <a id="menu-icon"></a>
 <ul>
@@ -167,7 +184,7 @@ p {
   <a href="http://3030poetry.com/">Source</a>
 </div>
 	 <h1>Poetry 30/30 About Page</h1>
-<p>April is national poetry month! Express your poetry with prompts by <a target="_blank" href= "http://3030poetry.com">Word X Word</a> and formats by Mr. Capley. <br><br>These webpages (under seedname101.github.io) were made solely for convenience, not for financial purposes!<br><br>Every day, a new quote is posted in relation to the poem's topic <br><br>The websites are still in their beta stage, so not all features are currently available.</p>
+<p>April is national poetry month. Understand poetry better with prompts by <a target="_blank" href= "http://3030poetry.com">Word X Word</a> and formats by Mr. Capley. <br><br><a href = "https://poetry3030.com/">poetry3030.com</a> was made for your convenience, enjoy!<br><br>Every day, a new quote is posted in relation to the poem's topic.<br><br>The website is quickly approaching the end of beta, so expect this design to be used in the 2019-2020 school year.</p>
 
  
 
