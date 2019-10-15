@@ -248,12 +248,8 @@ p {
 
   </body>
 	    <script type="text/javascript">
+var ldadd = 0;	
 document.getElementById("ldmode").addEventListener("click", lightMode);
-var ldadd = 0;		    
-if(ldadd >= 2){
-ldadd = 0;
-console.log("It works outside"); 
-}	
 if(ldadd == 0){
  document.getElementById("ldmode").innerHTML = "Light Mode";	
 
@@ -261,13 +257,10 @@ if(ldadd == 0){
 		    
 function lightMode() {
 console.log("click");
- var ldadd = 0;
-ldadd += 0.5;
-
-if(ldadd >= 2){
-ldadd = 0;
-console.log("It Works In Lightmode"); 
-} 
+	ldadd += 0.5;
+	if(ldadd >= 2){
+	ldadd = 0;
+	}
 	
 if(ldadd == 0){
 document.getElementById("ldmode").innerHTML = "Light Mode";
