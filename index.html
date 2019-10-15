@@ -252,12 +252,15 @@ document.getElementById("ldmode").addEventListener("click", lightMode);
 var ldadd = 0;		    
 if(ldadd == 0){
 document.getElementById("ldmode").innerHTML = "Light Mode";
+	 console.log("0 outside"); 
 }
 if(ldadd == 1){
   document.getElementById("ldmode").innerHTML = "Dark Mode";
+	 console.log("1 outside"); 
 }
 if(ldadd == 2){
 ldadd -= 2;
+	 console.log("It works outside"); 
 }
 		    
 		    
@@ -267,14 +270,17 @@ ldadd += 1;
 	
 if(ldadd == 0){
 document.getElementById("ldmode").innerHTML = "Light Mode";
+	 console.log("0 inside"); 
 }
 	
 if(ldadd == 1){
   document.getElementById("ldmode").innerHTML = "Dark Mode";
+	 console.log("1 inside"); 
 }
 	
 if(ldadd == 2){
 ldadd -= 2;
+	 console.log("It Works In Lightmode"); 
 }	
 }
 	    </script>
