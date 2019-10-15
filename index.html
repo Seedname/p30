@@ -250,38 +250,35 @@ p {
 	    <script type="text/javascript">
 document.getElementById("ldmode").addEventListener("click", lightMode);
 var ldadd = 0;		    
+if(ldadd >= 2){
+ldadd = 0;
+console.log("It works outside"); 
+}	
 if(ldadd == 0){
-document.getElementById("ldmode").innerHTML = "Light Mode";
-	 console.log("0 outside"); 
-}
-if(ldadd == 1){
-  document.getElementById("ldmode").innerHTML = "Dark Mode";
-	 console.log("1 outside"); 
-}
-if(ldadd == 2){
-ldadd -= 2;
-	 console.log("It works outside"); 
-}
-		    
+ document.getElementById("ldmode").innerHTML = "Light Mode";	
+
+}		    
 		    
 function lightMode() {
  var ldadd = 0;
 ldadd += 1;
+
+if(ldadd == 2){
+ldadd = 0;
+console.log("It Works In Lightmode"); 
+} 
 	
 if(ldadd == 0){
 document.getElementById("ldmode").innerHTML = "Light Mode";
-	 console.log("0 inside"); 
+console.log("0 inside"); 
 }
 	
 if(ldadd == 1){
-  document.getElementById("ldmode").innerHTML = "Dark Mode";
-	 console.log("1 inside"); 
+ document.getElementById("ldmode").innerHTML = "Dark Mode";
+console.log("1 inside"); 
 }
 	
-if(ldadd == 2){
-ldadd -= 2;
-	 console.log("It Works In Lightmode"); 
-}	
+	
 }
 	    </script>
 </html>
