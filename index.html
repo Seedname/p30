@@ -192,6 +192,7 @@ p {
   <a href="mailto:juliandominguez0415@gmail.com">Contact Me</a>
   <a href="https://poetry3030.com/#aformatd">All Format Descriptions</a>
   <a href="http://3030poetry.com/">Source</a>
+  <a id = "ldmode"></a>
 </div>
 	    <h1>Poetry 30/30 Home Page</h1>
 	    <p>Welcome to the Poetry3030.com's homepage! During the month of April, the day's format will be posted here.</p>
@@ -244,5 +245,35 @@ p {
     </section>
 
   </body>
-  
+	    <script type="text/javascript">
+document.getElementById("ldmode").addEventListener("click", lightMode);
+var ldadd = 0;		    
+if(ldadd == 0){
+document.getElementById("ldmode").innerHTML = "Light Mode";
+}
+if(ldadd == 1){
+  document.getElementById("ldmode").innerHTML = "Dark Mode";
+}
+if(ldadd >= 2){
+ldadd = 0;
+}
+		    
+		    
+function lightMode() {
+ var ldadd = 0;
+ldadd += 1;
+	
+if(ldadd == 0){
+document.getElementById("ldmode").innerHTML = "Light Mode";
+}
+	
+if(ldadd == 1){
+  document.getElementById("ldmode").innerHTML = "Dark Mode";
+}
+	
+if(ldadd >= 2){
+ldadd = 0;
+}	
+}
+	    </script>
 </html>
