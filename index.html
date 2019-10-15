@@ -157,7 +157,7 @@ p {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #1b1b1b;
+  background: #1b1b1b;
   overflow-x: hidden;
   padding-top: 120px;
   border: 2px solid #000000;
@@ -166,7 +166,6 @@ p {
   padding: 8px 10px 8px 18px;
   text-decoration: none;
   font-size: 20px;
-  color: #4d4dff;
   display: block;
   -webkit-user-select: none; /* Safari 3.1+ */
   -moz-user-select: none; /* Firefox 2+ */
@@ -268,15 +267,35 @@ console.log("click");
 	
 if(ldadd == 0){
 document.getElementById("ldmode").innerHTML = "Light Mode";
-console.log("0 inside"); 
+ document.body.style.background = "#141414";	
+ document.body.style.color = "#141414";
+ document.getElementsByTagName("a").style.color = "#4d4dff";
+ document.getElementsByTagName("header").style.background = "#1b1b1b";
+ document.getElementsByTagName("h1").style.color = "#4666ff";
+ document.getElementsByTagName("h2").style.color = "#4666ff";	
+ document.getElementsByTagName("h3").style.color = "#5ed7e8";
+ document.getElementsByTagName("h6").style.color = "white";
+ document.getElementsByTagName("p").style.color = "white";
+ document.getElementsByClassName("sidenav").style.background = "1b1b1b";
+}
 }
 	
 if(ldadd == 1){
  document.getElementById("ldmode").innerHTML = "Dark Mode";
-console.log("1 inside"); 
+ document.body.style.background = "#f9f9f9";	
+ document.body.style.color = "#E3E3E3";
+ document.getElementsByTagName("a").style.color = "#4C9CF1";
+ document.getElementsByTagName("header").style.background = "#fff";
+ document.getElementsByTagName("h1").style.color = "#2262AD";
+ document.getElementsByTagName("h2").style.color = "#2262AD";	
+ document.getElementsByTagName("h3").style.color = "#e6e884";
+ document.getElementsByTagName("h6").style.color = "black";
+ document.getElementsByTagName("p").style.color = "black";
+ document.getElementsByClassName("sidenav").style.background = "white";
 }
+		
 	
 	
 }
-	    </script>
+]</script>
 </html>
