@@ -96,19 +96,19 @@ section {
 	height: 100%;
 	
 }
-.he1 {
+h1 {
 	font-size: 3em;
 	color: #4666ff;
 	line-height: 1.15em;
 	margin: 20px 0 ;
 }
-.he2 {
+h2{
 	font-size: 2.3em;
 	color: #4666ff;
 	line-height: 1.15em;
 	margin: 20px 0 ;
 }
-.he3 {
+h3 {
 	font-size: 1.6em;
 	color: #5ed7e8;
 	line-height: 1.15em;
@@ -117,7 +117,7 @@ section {
 h6{
 	color: white; 
 }
-.pa {
+p {
 	line-height: 1.45em;
 	margin-bottom: 20px;
 	color: white;
@@ -290,18 +290,27 @@ document.getElementById("ldmode").innerHTML = "Light Mode";
 
 	
 if(ldadd == 1){
+var head6 = document.getElementsByTagName("h6");
+var para = document.getElementsByTagName("p");
  document.getElementById("ldmode").innerHTML = "Dark Mode";
  document.body.style.background = "#f9f9f9";	
  document.body.style.color = "#E3E3E3";
 	//just give up and use ids
- document.getElementsByTagName('a')[0].style.color = "#4C9CF1";
- document.getElementsByTagName('header')[0].style.background = "#fff";
- document.getElementsByTagName('h1')[0].style.color = "#2262AD";
- document.getElementsByTagName('h2')[0].style.color = "#2262AD";	
- document.getElementsByTagName('h3')[0].style.color = "#e6e884";
- document.getElementsByTagName('h6')[0].style.color = "black";
- document.getElementsByTagName('p')[0].style.color = "black";
+ document.getElementsByTagName('a').style.color = "#4C9CF1";
+ document.getElementsByTagName('header').style.background = "#fff";
+ document.getElementsByTagName('h1').style.color = "#2262AD";
+ document.getElementsByTagName('h2').style.color = "#2262AD";	
+ document.getElementsByTagName('h3').style.color = "#e6e884";
+ 
+
  document.getElementsByClassName("sidenav")[0].style.background = "white";
+
+var i;
+  for (i = 0; i < x.length; i++) {
+    para[i].style.color = "black";
+    head6[i].style.color = "black";
+  }
+
 }
 		
 	
