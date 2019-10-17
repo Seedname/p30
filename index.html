@@ -296,9 +296,7 @@ console.log("click");
 	if(ldadd >= 2){
 	ldadd = 0;
 }
-	
-if(ldadd == 0){
-
+		   
 var head1 = document.getElementsByTagName("h1");
 var head2 = document.getElementsByTagName("h2");
 var head3 = document.getElementsByTagName("h3");
@@ -306,43 +304,44 @@ var head6 = document.getElementsByTagName("h6");
 var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
-var linkA = document.getElementsByTagName("a");
+var linkA = document.getElementsByTagName("a");		   
 
+var i;				     
+  for (i = 0; i < x.length; i++){
+if(ldadd !== 1){break;}
+    para[i].style.color = "black";
+    head1[i].style.color = "#2262AD";
+    head2[i].style.color = "#2262AD";
+    head3[i].style.color = "#e6e884";
+    head6[i].style.color = "black";
+    sideN[i].style.background = "white";
+    headR[i].style.background = "#fff";
+    linkA[i].style.color = "#4C9CF1";				   
+  }
+				    
+var y;
+  for (y = 0; y < x.length; y++){
+if(ldadd !== 0){break;}
+    para[y].style.color = "white";
+    head1[y].style.color = "#4666ff";
+    head2[y].style.color = "#4666ff";
+    head3[y].style.color = "#5ed7e8";
+    head6[y].style.color = "white";
+    sideN[y].style.background = "#1b1b1b";
+    headR[y].style.background = "#1b1b1b";
+    linkA[y].style.color = "#4d4dff";				   
+  }
+				    
+if(ldadd == 0){
 document.getElementById("ldmode").innerHTML = "Light Mode";
  document.body.style.background = "#141414";	
  document.body.style.color = "#141414";
- document.getElementsByTagName("a")[0].style.color = "#4d4dff";
- document.getElementsByTagName("header")[0].style.background = "#1b1b1b";
- document.getElementsByTagName("h1")[0].style.color = "#4666ff";
- document.getElementsByTagName("h2")[0].style.color = "#4666ff";	
- document.getElementsByTagName("h3")[0].style.color = "#5ed7e8";
- document.getElementsByTagName("h6")[0].style.color = "white";
- document.getElementsByClassName("pa")[0].style.color = "white";
- document.getElementsByClassName("sidenav")[0].style.background = "#1b1b1b";
 }
-
-	
-
 if(ldadd == 1){
  document.getElementById("ldmode").innerHTML = "Dark Mode";
  document.body.style.background = "#f9f9f9";	
  document.body.style.color = "#E3E3E3";
-var i;
-  for (i = 0; i < x.length; i++) {
-    para[i].style.color = "black";
-    head1[i].style.color = "#2262AD";
-    head2[i].style.color = "#2262AD";
-    head3[i].style.color = "e6e884";
-    head6[i].style.color = "black";
-    sideN[i].style.background = "white";
-    headR[i].style.background = "#fff";
-    linkA[i].style.color = "#4C9CF1";
-  }
-
 }
-		
-	
-	
 }
 </script>
 </html>
