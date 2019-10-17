@@ -122,7 +122,7 @@ p {
 		display: none;
 		position: absolute;
 		padding: 20px;
-		background: #fff;
+		background: #1b1b1b;
 		border: 5px solid #444;
 		right: 20px;
 		top: 60px;
@@ -191,7 +191,187 @@ p {
     </section> 
 
   </body>
-
+	    <script type="text/javascript">
+var ldadd = 0;	
+document.getElementById("ldmode").addEventListener("click", lightMode);
+var head1 = document.getElementsByTagName("h1");
+var head2 = document.getElementsByTagName("h2");
+var head3 = document.getElementsByTagName("h3");
+var head6 = document.getElementsByTagName("h6");
+var para = document.getElementsByTagName("p");
+var sideN = document.getElementsByClassName("sidenav");
+var headR = document.getElementsByTagName("header");
+var linkA = document.getElementsByTagName("a");	
+	
+					     
+if(ldadd == 0){
+ document.getElementById("ldmode").innerHTML = "Activate Dark Mode";
+ document.body.style.background = "#f9f9f9";	
+ document.body.style.color = "#E3E3E3";
+var head1 = document.getElementsByTagName("h1");
+var head2 = document.getElementsByTagName("h2");
+var head3 = document.getElementsByTagName("h3");
+var head6 = document.getElementsByTagName("h6");
+var para = document.getElementsByTagName("p");
+var sideN = document.getElementsByClassName("sidenav");
+var headR = document.getElementsByTagName("header");
+var linkA = document.getElementsByTagName("a");
+					     
+var l;				     
+  for (l = 0; l < para.length; l++){
+    para[l].style.color = "black";				 
+}
+var m;				     
+  for (m = 0; m < head1.length; m++){
+    head1[m].style.color = "#2262AD";				 
+}				 
+var n;				     
+  for (n = 0; n < head2.length; n++){
+    head2[n].style.color = "#2262AD";				 
+}				    
+var o;				     
+  for (o = 0; o < head3.length; o++){
+    head3[o].style.color = "#e6e884";			 
+}
+var p;				     
+  for (p = 0; p < head6.length; p++){
+    head6[p].style.color = "black";			 
+}				    
+var q;				     
+  for (q = 0; q < linkA.length; q++){
+    linkA[q].style.color = "#4C9CF1";			 
+}							      
+var r;				    
+   for (r = 0; r < headR.length; r++){
+    headR[r].style.background = "#fff";			   
+  }					   
+var s;				    
+   for (s = 0; s < sideN.length; s++){
+    sideN[s].style.background = "white";			   
+  }
+}		
+				 				    
+				    
+				   
+				    
+				    
+function lightMode() {
+	ldadd += 0.5;
+	if(ldadd >= 2){
+	ldadd = 0;
+}
+		   
+var head1 = document.getElementsByTagName("h1");
+var head2 = document.getElementsByTagName("h2");
+var head3 = document.getElementsByTagName("h3");
+var head6 = document.getElementsByTagName("h6");
+var para = document.getElementsByTagName("p");
+var sideN = document.getElementsByClassName("sidenav");
+var headR = document.getElementsByTagName("header");
+var linkA = document.getElementsByTagName("a");		
+					     
+					   			    
+				   	
+if(ldadd == 0){
+ document.getElementById("ldmode").innerHTML = "Activate Dark Mode";
+ document.body.style.background = "#f9f9f9";	
+ document.body.style.color = "#E3E3E3";
+var head1 = document.getElementsByTagName("h1");
+var head2 = document.getElementsByTagName("h2");
+var head3 = document.getElementsByTagName("h3");
+var head6 = document.getElementsByTagName("h6");
+var para = document.getElementsByTagName("p");
+var sideN = document.getElementsByClassName("sidenav");
+var headR = document.getElementsByTagName("header");
+var linkA = document.getElementsByTagName("a");
+					     
+var l;				     
+  for (l = 0; l < para.length; l++){
+    para[l].style.color = "black";				 
+}
+var m;				     
+  for (m = 0; m < head1.length; m++){
+    head1[m].style.color = "#2262AD";				 
+}				 
+var n;				     
+  for (n = 0; n < head2.length; n++){
+    head2[n].style.color = "#2262AD";				 
+}				    
+var o;				     
+  for (o = 0; o < head3.length; o++){
+    head3[o].style.color = "#e6e884";			 
+}
+var p;				     
+  for (p = 0; p < head6.length; p++){
+    head6[p].style.color = "black";			 
+}				    
+var q;				     
+  for (q = 0; q < linkA.length; q++){
+    linkA[q].style.color = "#4C9CF1";			 
+}							      
+var r;				    
+   for (r = 0; r < headR.length; r++){
+    headR[r].style.background = "#fff";			   
+  }					   
+var s;				    
+   for (s = 0; s < sideN.length; s++){
+    sideN[s].style.background = "white";			   
+  }
+}				    
+				    
+if(ldadd == 1){
+document.getElementById("ldmode").innerHTML = "Activate Light Mode";
+ document.body.style.background = "#141414";	
+ document.body.style.color = "#141414";
+				      
+var head1 = document.getElementsByTagName("h1");
+var head2 = document.getElementsByTagName("h2");
+var head3 = document.getElementsByTagName("h3");
+var head6 = document.getElementsByTagName("h6");
+var para = document.getElementsByTagName("p");
+var sideN = document.getElementsByClassName("sidenav");
+var headR = document.getElementsByTagName("header");
+var linkA = document.getElementsByTagName("a");	
+					     
+var i;					 
+  for (i = 0; i < para.length; i++){
+    para[i].style.color = "white";
+}
+var t;				     
+  for (t = 0; t < head1.length; t++){
+    head1[t].style.color = "#4666ff";				 
+}				 
+var u;				     
+  for (u = 0; u < head2.length; u++){
+    head2[u].style.color = "#4666ff";			 
+}				    
+var v;				     
+  for (v = 0; v < head3.length; v++){
+    head3[v].style.color = "#5ed7e8";			 
+}
+var w;				     
+  for (w = 0; w < head6.length; w++){
+    head6[w].style.color = "white";			 
+}				    
+var x;				     
+  for (x = 0; x < linkA.length; x++){
+    linkA[x].style.color = "#4d4dff";			 
+}	
+var y;				    
+   for (y = 0; y < headR.length; y++){
+    headR[y].style.background = "#1b1b1b";			   
+  }					    
+var z;				    
+   for (z = 0; z < sideN.length; z++){
+    sideN[z].style.background = "#1b1b1b";			   
+  }	
+				 
+}
+					   
+				      
+				    
+}
+</script>
 </html>
 
 
