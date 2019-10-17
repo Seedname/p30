@@ -289,26 +289,29 @@ document.getElementById("ldmode").innerHTML = "Light Mode";
 }
 
 	
+
 if(ldadd == 1){
+var head1 = document.getElementsByTagName("h1");
+var head2 = document.getElementsByTagName("h2");
+var head3 = document.getElementsByTagName("h3");
 var head6 = document.getElementsByTagName("h6");
 var para = document.getElementsByTagName("p");
-
+var sideN = document.getElementsByClassName("sidenav");
+var headR = document.getElementsByTagName("header");
+var linkA = document.getElementsByTagName("a");
  document.getElementById("ldmode").innerHTML = "Dark Mode";
  document.body.style.background = "#f9f9f9";	
  document.body.style.color = "#E3E3E3";
- document.getElementsByTagName('a').style.color = "#4C9CF1";
- document.getElementsByTagName('header').style.background = "#fff";
- document.getElementsByTagName('h1').style.color = "#2262AD";
- document.getElementsByTagName('h2').style.color = "#2262AD";	
- document.getElementsByTagName('h3').style.color = "#e6e884";
- 
-
- document.getElementsByClassName("sidenav")[0].style.background = "white";
-
 var i;
   for (i = 0; i < x.length; i++) {
     para[i].style.color = "black";
+    head1[i].style.color = "#2262AD";
+    head2[i].style.color = "#2262AD";
+    head3[i].style.color = "e6e884";
     head6[i].style.color = "black";
+    sideN[i].style.background = "white";
+    headR[i].style.background = "#fff";
+    linkA[i].style.color = "#4C9CF1";
   }
 
 }
