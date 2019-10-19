@@ -248,7 +248,7 @@ p {
 		 <p class = "pa">A refrain is a line that repeats throughout the poem. Villanelles refrains and a rhyme pattern that flows perfectly if written properly. A popular villanelle is "Do not go gentle into that good night", by Dylan Thomas. Click <a href = "https://poets.org/text/villanelle-poetic-form">here</a> to learn more about Villanelles.</p>
 	<div>
     </section>
-
+<footer><h6>&copy; Copyright <spa id="cYear"></span>, Example Corporation</h6></footer>
   </body>
 	    <script type="text/javascript">
 var ldadd = 0;	
@@ -318,6 +318,7 @@ var s;
 function lightMode() {
 
 	ldadd += 0.5;
+				       
 	if(ldadd >= 2){
 	ldadd = 0;
 }
@@ -427,11 +428,10 @@ var z;
     sideN[z].style.background = "#1b1b1b";			   
   }	
 				 
+}					   				  				    
 }
-					   
-				      
-				    
-
-}
+var d = new Date();
+page.currentYear = d.getFullYear();
+document.getElementById("cYear").innerHTML = d;					 
 </script>
 </html>
