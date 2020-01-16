@@ -227,7 +227,40 @@ p {
 .buttonm{
 text-align:center;
  }
+* {
+  box-sizing: border-box;
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -256,6 +289,40 @@ text-align:center;
 	    </div>
 	        <h1>All Topics</h1>
 	    <p>You can use this tool to find the topic for a poem in a day in April.</p>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a>April 1st, 2019</a></li>
+  <li><a>April 2nd, 2019</a></li>
+  <li><a>April 3rd, 2019</a></li>
+  <li><a>April 4th, 2019</a></li>
+  <li><a>April 5th, 2019</a></li>
+  <li><a>April 6th, 2019</a></li>
+  <li><a>April 7th, 2019</a></li>
+  <li><a>April 8th, 2019</a></li>
+  <li><a>April 9th, 2019</a></li>
+  <li><a>April 10th, 2019</a></li>
+  <li><a>April 11th, 2019</a></li>
+  <li><a>April 12th, 2019</a></li>
+  <li><a>April 13th, 2019</a></li>
+  <li><a>April 14th, 2019</a></li>
+  <li><a>April 15th, 2019</a></li>
+  <li><a>April 16th, 2019</a></li>
+  <li><a>April 17th, 2019</a></li>
+  <li><a>April 18th, 2019</a></li>
+  <li><a>April 19th, 2019</a></li>
+  <li><a>April 20th, 2019</a></li>
+  <li><a>April 21st, 2019</a></li>
+  <li><a>April 22nd, 2019</a></li>
+  <li><a>April 23rd, 2019</a></li>
+  <li><a>April 24th, 2019</a></li>
+  <li><a>April 25th, 2019</a></li>
+  <li><a>April 26th, 2019</a></li>
+  <li><a>April 27th, 2019</a></li>
+  <li><a>April 28th, 2019</a></li>
+  <li><a>April 29th, 2019</a></li>
+  <li><a>April 30th, 2019</a></li>
+</ul>
 
 	<div class = "buttonm"><button id = "prev" class="button" onclick="subFunction()">Prev</button>
 	<button id = "datemid" class="button">April 1st, 2019</button>
@@ -267,6 +334,22 @@ text-align:center;
 <br><br><br><br><br>
     </section>
 	<script text = "type/javascript">
+function searchList() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
 	var adfun = 0;
 	document.getElementById("next").addEventListener("click", addFunction);
 	document.getElementById("prev").addEventListener("click", subFunction);
