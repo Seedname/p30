@@ -270,8 +270,10 @@ visibility: hidden;
 if (document.readyState == 'loading' || document.readyState == 'interactive') {
 	console.log("Yeetus");
 	document.getElementById("mycanvas").style.visibility = "visible";
-} else if (document.readyState == 'complete') {
-	document.getElementById("mycanvas").style.visibility = "hidden";																	   								
+	console.log(document.getElementById("mycanvas").style.visibility);
+} else (document.readyState == 'complete') {
+	document.getElementById("mycanvas").style.visibility = "hidden";	
+	console.log(document.getElementById("mycanvas").style.visibility);			       
 									}									   
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
