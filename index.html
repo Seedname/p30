@@ -186,7 +186,7 @@ font-size: 10px;
   position: absolute;
   z-index: 100;
   opacity: 0.5;
-visibility: hidden;
+visibility: visible;
   }
 	
     </style>
@@ -267,13 +267,10 @@ visibility: hidden;
     </p>
 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
 <script>	
-if (document.readyState == 'loading') {
-	document.getElementById("mycanvas").style.visibility = "visible";
-	console.log(document.getElementById("mycanvas").style.visibility);
-} else {
+if(document.readyState == 'interactive' || document.readyState == 'complete') {
 	document.getElementById("mycanvas").style.visibility = "hidden";	
 	console.log(document.getElementById("mycanvas").style.visibility);			       
-									}									   
+			}									   
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
 /*									   
