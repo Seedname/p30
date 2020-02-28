@@ -186,6 +186,7 @@ font-size: 10px;
   position: absolute;
   z-index: 100;
   opacity: 0.5;
+  visibility: visible;
   }
 	
     </style>
@@ -265,14 +266,17 @@ font-size: 10px;
       <canvas id="mycanvas"></canvas> 
     </p>
 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
-<script>										
+<script>	
+if (document.readyState == 'complete') {document.getElementById("mycanvas").style.visibility = "hidden";
+													}									   
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
+/*									   
  var elmnt = document.body;
   var pageW = elmnt.scrollWidth;
   var pageH = elmnt.scrollHeight;
-  
-        size(pageW, pageH); 
+  */
+        size(screen.width, screen.height); 
         frameRate(60);
 var angle = -90;
 var rangle = 0;
