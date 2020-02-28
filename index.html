@@ -265,8 +265,7 @@ font-size: 10px;
       <canvas id="mycanvas"></canvas> 
     </p>
 			    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
-		<script>
-if (document.readyState == "complete") {
+<script>
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(screen.width, screen.height); 
@@ -310,11 +309,6 @@ popMatrix();
 
     var canvas = document.getElementById("mycanvas"); 
     var processingInstance = new Processing(canvas, sketchProc); 
-}
-			       </script>
-  
-	    <script type="text/javascript">
-
 var ldadd = 0;	
 document.getElementById("ldmode").addEventListener("click", lightMode);
 var head1 = document.getElementsByTagName("h1");
