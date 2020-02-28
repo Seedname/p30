@@ -264,14 +264,15 @@ font-size: 10px;
 <p align="center"> 
       <canvas id="mycanvas"></canvas> 
     </p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
-<script>
-var screenwidth = $(document).height();
-var screenheight = $(document).width();													
+<script>										
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
-        size(screenwidth, screenheight); 
+ var elmnt = document.body;
+  var pageW = elmnt.scrollWidth;
+  var pageH = elmnt.scrollHeight;
+  
+        size(pageW, pageH); 
         frameRate(60);
 var angle = -90;
 var rangle = 0;
