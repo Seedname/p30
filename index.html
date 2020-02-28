@@ -268,10 +268,9 @@ visibility: hidden;
 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
 <script>	
 if (document.readyState == 'loading' || document.readyState == 'interactive') {
-	console.log("Yeetus");
 	document.getElementById("mycanvas").style.visibility = "visible";
 	console.log(document.getElementById("mycanvas").style.visibility);
-} else if (document.readyState == 'complete') {
+} if (document.readyState == 'complete') {
 	document.getElementById("mycanvas").style.visibility = "hidden";	
 	console.log(document.getElementById("mycanvas").style.visibility);			       
 									}									   
