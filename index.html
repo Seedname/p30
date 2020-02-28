@@ -180,6 +180,14 @@ footer{
 color: #a19f9f;
 font-size: 10px;	
 }    
+#mycanvas{
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 100;
+  opacity: 0.5;
+  }
+	
     </style>
   </head>
   <body>
@@ -253,9 +261,60 @@ font-size: 10px;
 	<div>
 	<footer><span id="footer"> Copyright &copy; <spa id="cYear"></span>, poetry3030.com</span></footer>
     </section>
+<p align="center"> 
+      <canvas id="mycanvas"></canvas> 
+    </p>
+			    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+		<script>
+if (document.readyState == "complete") {
+        var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(screen.width, screen.height); 
+        frameRate(60);
+var angle = -90;
+var rangle = 0;
+var r = 35;
+var cr = 255;
+var cg = 255;
+var cb = 255;
+background(255);
+draw = function() {
+    rangle+=1;
+    if(angle >= -90 && angle < 270){
+    angle+=3;
+    cr -= 2;
+    cg -= 2;
+    cb -= 2;
+    } else if(angle >= 270 && angle < 270+360){
+        angle += 3;
+        cr += 2;
+        cg += 2;
+        cb += 2;
+    } else{
+        angle = -90;
+        
+    }
+var position = new PVector(r*cos(angle*(180/Math.PI)), r*sin(angle*(180/Math.PI)));
+pushMatrix();
+translate(width/2, height/2);
+rotate(rangle);
+noStroke();
+fill(cr, cg, cb);
+ellipse(position.x, position.y, 10, 10);
+popMatrix();
 
-  </body>
+};
+
+        
+    }};
+
+    var canvas = document.getElementById("mycanvas"); 
+    var processingInstance = new Processing(canvas, sketchProc); 
+}
+			       </script>
+  
 	    <script type="text/javascript">
+
 var ldadd = 0;	
 document.getElementById("ldmode").addEventListener("click", lightMode);
 var head1 = document.getElementsByTagName("h1");
@@ -437,5 +496,5 @@ var z;
 }
 var d = new Date();
 document.getElementById("cYear").innerHTML = d.getFullYear();					 
-</script>
+</script></body>
 </html>
