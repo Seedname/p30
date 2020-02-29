@@ -190,57 +190,11 @@ p {
       font-weight: bold;
      }    
 
-        .button {
-  background-color: #20639B;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-#button1 {
-  background-color: #20639B;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-	/*Get RID OF THAT ANNOYING HIGHLIGHTING*/
-    user-select: none; 
-   -webkit-user-select: none; 
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-}
-#button1:hover {
-  background-color:  #4C9CF1;
-      }
-#button1:focus {
-  background-color: #4C9CF1; 
-}
- #button1:active {
-      background-color:	#4C9CF1;
-      }
-#container1{
-text-align: center;
-}   
-#container{
-text-align: center;
-}
-#clicked{
-color: black;
-font-size: 20px;
-text-align: center;
 
-}
+
+
+
+
     </style>
   </head>
   <body>
@@ -266,14 +220,21 @@ text-align: center;
     	    <h1>Random Format Selector</h1>
 	    <p>Use this tool to select a random format. This is not the format for the day.</p>
 
-     <div id = "container1">
-    <p onmouseover="overFunction()" onclick="myFunction()" id="button1">Click to generate random format</p>
-    </div><br>
-    <p id = "clicked"></p>
+    <p align="center"> 
+      <canvas id="mycanvas"></canvas> 
+    </p>
     
     
-    </section><script type = "text/javascript">
-function myFunction(){
+    </section>
+	   <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+	  <script>
+ 
+
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(600, 400); 
+        frameRate(60);
+        //variables {
 var a = "Quatrain";
 var b = "Sonnet";
 var c = "Haiku";
@@ -288,50 +249,96 @@ var k = "Prose Poem";
 var l = "Tercet";
 var m = "Villanelle";
 var n = "Free Verse";
-var o = Math.floor(Math.random() * 14);
-if(o === 0){
-document.getElementById("clicked").innerHTML = a;
+var y = height-height-60;
+var y1 = height/2;
+var ystate = 0;
+//}
+var qw = "Click to Generate";
+var qv = "Click for random format"
+var o = 0;
+mouseClicked = function(){
+o = Math.round(random(0, 13));
+y = width-width-60;
+ystate += 1;
+y1 += 1000000;
+};
+draw = function() {
+if(ystate === 1){
+    y+=5;
 }
-if(o === 1){
-document.getElementById("clicked").innerHTML = b;
+if(y >= height/2){
+    ystate = 0;
+    y = height/2;
 }
-if(o === 2){
-document.getElementById("clicked").innerHTML = c;
-}     
-if(o === 3){
-document.getElementById("clicked").innerHTML = d;
-}     
-if(o === 4){
-document.getElementById("clicked").innerHTML = e;
+if(ystate >= 2){
+    ystate = 1;
 }
-if(o === 5){
-document.getElementById("clicked").innerHTML = f;
-} 
-if(o === 6){
-document.getElementById("clicked").innerHTML = g;
-}     
-if(o === 7){
-document.getElementById("clicked").innerHTML = h;
-}
-if(o === 8){
-document.getElementById("clicked").innerHTML = i;
-}       
-if(o === 9){
-document.getElementById("clicked").innerHTML = j;
-}     
-if(o === 10){
-document.getElementById("clicked").innerHTML = k;
-}
-if(o === 11){
-document.getElementById("clicked").innerHTML = l;
-}       
-if(o === 12){
-document.getElementById("clicked").innerHTML = m;
-}
-if(o === 13){
-document.getElementById("clicked").innerHTML = n;
-}       
-      }
+
+     background(255);
+    textAlign(CENTER, CENTER);
+    fill(76, 143, 236);
+    textSize(60);
+text(qw, width/2, y);
+textSize(40);
+text(qv, width/2, y1);
+//The values {
+    if(o === 0){
+        qw = a;
+    }
+    if(o === 1){
+        qw = b;
+    }
+    if(o === 2){
+        qw = c;
+    }
+    if(o === 3){
+        qw = d;
+    }
+    if(o === 4){
+        qw = e;
+    }
+    if(o === 5){
+       qw = f;
+    }
+     if(o === 6){
+       qw = g;
+    }
+    if(o === 7){
+        qw = h;
+    }
+     if(o === 8){
+       qw = i;
+    }
+    if(o === 9){
+       qw = j;
+    }
+    if(o === 10){
+        qw = k;
+    }
+    if(o === 11){
+      qw = l;
+    }
+    if(o === 12){
+      qw = m;
+    }
+    if(o === 13){
+        qw = n;
+    }
+//}
+
+};
+
+
+
+
+
+    }};
+
+    var canvas = document.getElementById("mycanvas"); 
+
+    var processingInstance = new Processing(canvas, sketchProc); 
+
+
 var ldadd = 0;	
 document.getElementById("ldmode").addEventListener("click", lightMode);
 var head1 = document.getElementsByTagName("h1");
