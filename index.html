@@ -436,7 +436,13 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-$('#main-menu a:hover').css('background-color','rgb(249, 249, 249)');						     
+					     
+var a_list = document.querySelectorAll('#menu-icon a:hover');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = rgb(249, 249, 249);
+}
+					     
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -507,7 +513,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-$('#main-menu a:hover').css('background-color','rgb(249, 249, 249)');					
+var a_list = document.querySelectorAll('#menu-icon a:hover');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = rgb(249, 249, 249);
+}				
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -555,7 +565,13 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");	
-$('#main-menu a:hover').css('background-color','rgb(27, 27, 27)');						     
+					     
+var a_list = document.querySelectorAll('#menu-icon a:hover');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = rgb(27, 27, 27);
+}		
+					     
 var i;					 
   for (i = 0; i < para.length; i++){
     para[i].style.color = "white";
