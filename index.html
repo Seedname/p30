@@ -58,7 +58,6 @@ header {
 	display: block;
 }
 nav {
-	background-color: #fff;
 	float: right;
 	padding: 20px;	
 	    }
@@ -437,7 +436,7 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-var navt = document.getElementsByTagName("nav");
+
 					     
 var l;				     
   for (l = 0; l < para.length; l++){
@@ -471,9 +470,6 @@ var s;
    for (s = 0; s < sideN.length; s++){
     sideN[s].style.background = "white";			   
   }
-   for (var z1 = 0; y < h.length; z1++){
-    navt[z1].style.backgroundColor = "#ffffff";			   
-}				       
 }		
 				 				    
 				    
@@ -511,8 +507,7 @@ var head6 = document.getElementsByTagName("h6");
 var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
-var linkA = document.getElementsByTagName("a");
-var navt = document.getElementsByTagName("nav");					     
+var linkA = document.getElementsByTagName("a");				
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -545,9 +540,6 @@ var s;
    for (s = 0; s < sideN.length; s++){
     sideN[s].style.background = "white";			   
   }
-   for (var s1 = 0; y < h.length; s1++){
-    navt[s1].style.backgroundColor = "#ffffff";			   
-}				       
 }				    
 				    
 if(ldadd == 1){
@@ -562,8 +554,7 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");						     		
-var navt = document.getElementsByTagName("nav");						     		
-					     					     
+					     
 var i;					 
   for (i = 0; i < para.length; i++){
     para[i].style.color = "white";
@@ -588,15 +579,10 @@ var x;
   for (x = 0; x < linkA.length; x++){
     linkA[x].style.color = "#4d4dff";			 
 }	
-				    
-   for (var z1 = 0; y < h.length; z1++){
-    navt[z1].style.backgroundColor = "#1b1b1b";			   
-}
-					      
-   for (var y = 0; y < headR.length; y++){
+var y;				    
+   for (y = 0; y < headR.length; y++){
     headR[y].style.backgroundColor = "#1b1b1b";			   
-  }	
-					      
+  }					    
 var z;				    
    for (z = 0; z < sideN.length; z++){
     sideN[z].style.background = "#1b1b1b";			   
