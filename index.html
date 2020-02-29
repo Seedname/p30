@@ -53,8 +53,6 @@ header {
 #logo{
 	margin: 20px;
 	float: left;
-	width: 200px;
-	height: 40px;
 	font-size: 30px;
 	background: url(../img/logo.png) no-repeat center;
 	display: block;
@@ -192,7 +190,7 @@ position: absolute;
   </head>
   <body>
 <header>
-<a href="https://poetry3030.com" id="logo">Poetry 30/30<br><br>Homepage</a>
+<a href="https://poetry3030.com" id="logo"><canvas id="mycanvas1"></canvas></a>
 <nav>
 <a href="" id="menu-icon"></a>
 <ul>
@@ -265,6 +263,7 @@ position: absolute;
       <canvas id="mycanvas"></canvas> 
     </p>
 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+									    
 <script>	
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
@@ -318,6 +317,36 @@ popMatrix();
 
     var canvas = document.getElementById("mycanvas"); 
     var processingInstance = new Processing(canvas, sketchProc); 
+    var sketchProc1 = function(processingInstance1) {
+     with (processingInstance1) {
+        size(200, 80); 
+        frameRate(60);
+textSize(30);
+var ptext = "Poetry";
+var plength = textWidth(ptext);
+var poetry = new PVector(width-width-plength, height-height+80/2);
+var thirty = new PVector(width-width+200/2+45, height-height);
+draw = function() {
+    textAlign(CENTER, CENTER);
+background(255, 255, 255);
+ fill(76, 156, 241);
+ textSize(30);
+if(poetry.x <= width-width+100/2){
+    poetry.x +=1;
+}
+var tlength = textAscent();
+if(thirty.y-tlength <= width-width+80/2){
+    thirty.y +=0.5;
+}
+ text(ptext, poetry.x, poetry.y);
+
+text("30/30", thirty.x, thirty.y-tlength);
+};
+    }};
+
+    var canvas1 = document.getElementById("mycanvas1"); 
+
+    var processingInstance1 = new Processing(canvas1, sketchProc1); 
  var dat = new Date();
  var ms = dat.getMilliseconds();
 						   
