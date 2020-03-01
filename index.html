@@ -434,54 +434,74 @@ text-align:center;
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
 };
-						       
-function homepage(){
+var pageSwitching = "none";
+								
+if(pageSwitching == "homepage"){
 document.getElementById("homepage").style.display = "block";
 document.getElementById("descriptions").style.display = "none";	
 document.getElementById("about").style.display = "none";	
 document.getElementById("format").style.display = "none";	
 document.getElementById("topics").style.display = "none";	
-document.getElementById("selector").style.display = "none";							  						  
+document.getElementById("selector").style.display = "none";							   
+}
+if(pageSwitching == "descriptions"){
+document.getElementById("descriptions").style.display = "block";
+document.getElementById("homepage").style.display = "none";
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							       
+}	
+if(pageSwitching == "about"){
+document.getElementById("about").style.display = "block";
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";		
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							
+}	
+if(pageSwitching == "format"){
+document.getElementById("format").style.display = "block";
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";		
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							 
+}	
+if(pageSwitching == "topics"){
+document.getElementById("topics").style.display = "block";
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";		
+document.getElementById("selector").style.display = "none";							 
+}
+if(pageSwitching == "selector"){
+document.getElementById("selector").style.display = "block";
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";							   
+}	
+			      
+function homepage(){
+pageSwitching = "homepage";							  						  
 }
 function descriptions(){
-document.getElementById("homepage").style.display = "none";
-document.getElementById("descriptions").style.display = "block";	
-document.getElementById("about").style.display = "none";	
-document.getElementById("format").style.display = "none";	
-document.getElementById("topics").style.display = "none";	
-document.getElementById("selector").style.display = "none";							      
+pageSwitching = "descriptions";						      
 }
 function about(){
-document.getElementById("homepage").style.display = "none";
-document.getElementById("descriptions").style.display = "none";	
-document.getElementById("about").style.display = "block";	
-document.getElementById("format").style.display = "none";	
-document.getElementById("topics").style.display = "none";	
-document.getElementById("selector").style.display = "none";							      
+pageSwitching = "about";						      
 }	
 function format(){
-document.getElementById("homepage").style.display = "none";
-document.getElementById("descriptions").style.display = "none";	
-document.getElementById("about").style.display = "none";	
-document.getElementById("format").style.display = "block";	
-document.getElementById("topics").style.display = "none";	
-document.getElementById("selector").style.display = "none";							      
+pageSwitching = "format";							      
 }
 function topics(){
-document.getElementById("homepage").style.display = "none";
-document.getElementById("descriptions").style.display = "none";	
-document.getElementById("about").style.display = "none";	
-document.getElementById("format").style.display = "none";	
-document.getElementById("topics").style.display = "block";	
-document.getElementById("selector").style.display = "none";							      
+pageSwitching = "topics";			
 }	
 function selector(){
-document.getElementById("homepage").style.display = "none";
-document.getElementById("descriptions").style.display = "none";	
-document.getElementById("about").style.display = "none";	
-document.getElementById("format").style.display = "none";	
-document.getElementById("topics").style.display = "none";	
-document.getElementById("selector").style.display = "block";							      
+pageSwitching = "selector";						      
 }							       
     var sketchProc2 = function(processingInstance2) {
      with (processingInstance2) {
