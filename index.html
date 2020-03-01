@@ -313,7 +313,24 @@ img {
 .buttonm{
 text-align:center;
  }
-
+#homepage{
+display:block;	    
+	    }
+#descriptions{
+display:none;	    
+	    }
+#about{
+display:none;	    
+	    }
+#format{
+display:none;	    
+	    }
+#topics{
+display:none;	    
+	    }
+#selector{
+display:none;	    
+	    }    
     </style>
   </head>
   <body>
@@ -341,7 +358,7 @@ text-align:center;
 	    <h1 class = "he1">Poetry 30/30 Home Page</h1>
 	    <p class = "pa">Welcome to the Poetry3030.com's homepage! During the month of April, the day's format will be posted here.</p>
 	    </div>
-<div id = "formats">
+<div id = "descriptions">
 	 <div id = "aformatd">
 		 <h1 class = "he1">Format Descriptions</h1>
 		 <p class = "pa">This section of the home page allows you to view descriptions and examples of the formats throughout the month quickly and easily. If you still didn't understand the format of the day, click <a href = "https://poetry3030.com/p30-1">here.</a>
@@ -442,11 +459,29 @@ $(document).ready(function(){
 <script>	
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
-};		       
+};	
+function homepage(){
+							      
+}
+function descriptions(){
+							      
+}
+function about(){
+							      
+}	
+function format(){
+							      
+}
+function topics(){
+							      
+}	
+function selector(){
+							      
+}							       
     var sketchProc2 = function(processingInstance2) {
      with (processingInstance2) {
         size(600, 400); 
-        frameRate(60);
+        frameRate(60);						       
         //variables {
 var a = "Quatrain";
 var b = "Sonnet";
