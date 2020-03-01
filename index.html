@@ -339,19 +339,18 @@ display:none;
 <nav>
 <a href="" id="menu-icon"></a>
 <ul>
-<li><a href="https://poetry3030.com" class = "current">Home</a></li>
-<li><a href="https://poetry3030.com/about">About</a></li>
-<li><a href="https://poetry3030.com/format">Daily Format Breifing</a></li>
-<li><a href="https://poetry3030.com/topics">All Topics</a></li>
-<li><a href="https://poetry3030.com/selector">Random Format Selector</a></li>
+<li><a href="https://poetry3030.com" onclick="homepage()">Home</a></li>
+<li><a href="https://poetry3030.com/about" onclick="about()">About</a></li>
+<li><a href="https://poetry3030.com/format" onclick="format()">Daily Format</a></li>
+<li><a href="https://poetry3030.com/topics" onclick="topics()">All Topics</a></li>
+<li><a href="https://poetry3030.com/selector" onclick="selector()">Random Format Selector</a></li>
 </ul>
 </nav>
 </header>
     <section>
 <div class="sidenav">
-  <a href="mailto:juliandominguez0415@gmail.com">Contact Me</a>
-  <a href="https://poetry3030.com/#aformatd">All Format Descriptions</a>
-  <a href="http://3030poetry.com/">Source</a>
+  <a href="mailto:juliandominguez0415@gmail.com">Report Errors</a>
+  <a onclick="descriptions()">All Format Descriptions</a>
   <a onclick="lightMode()" id = "ldmode"></a>
 </div>
 <div id = "homepage">
@@ -461,22 +460,52 @@ window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
 };	
 function homepage(){
-							      
+document.getElementById("homepage").style.display = "block";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							  						  
 }
 function descriptions(){
-							      
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "block";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							      
 }
 function about(){
-							      
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "block";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							      
 }	
 function format(){
-							      
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "block";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							      
 }
 function topics(){
-							      
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "block";	
+document.getElementById("selector").style.display = "none";							      
 }	
 function selector(){
-							      
+document.getElementById("homepage").style.display = "none";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "block";							      
 }							       
     var sketchProc2 = function(processingInstance2) {
      with (processingInstance2) {
