@@ -184,7 +184,62 @@ position: absolute;
   z-index: 100;
   opacity: 0.5;
   }
-	
+      #container1{
+       text-align:center;
+       }
+      .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+      #container{
+      text-align: center;
+       color: white;
+      }
+      #b1{
+      color: white;
+      text-decoration: none; 
+      }
+  #poem{
+  background-color: #20639B;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+       }
+#poem:hover {
+  background-color:  #4C9CF1;
+      }
+#poem:focus {
+  background-color: #4C9CF1; 
+}
+#poem:active {
+      background-color:	#4C9CF1;
+      }
+       #para{
+        visibility: hidden;
+       color:black;
+        text-align: center;
+       }
+       a.ll{
+       color: red;
+       }
+img {
+	width: 600px;
+	height: 200px;
+}	
     </style>
   </head>
   <body>
@@ -208,8 +263,11 @@ position: absolute;
   <a href="http://3030poetry.com/">Source</a>
   <a onclick="lightMode()" id = "ldmode"></a>
 </div>
+<div id = "homepage">
 	    <h1 class = "he1">Poetry 30/30 Home Page</h1>
 	    <p class = "pa">Welcome to the Poetry3030.com's homepage! During the month of April, the day's format will be posted here.</p>
+	    </div>
+<div id = "formats">
 	 <div id = "aformatd">
 		 <h1 class = "he1">Format Descriptions</h1>
 		 <p class = "pa">This section of the home page allows you to view descriptions and examples of the formats throughout the month quickly and easily. If you still didn't understand the format of the day, click <a href = "https://poetry3030.com/p30-1">here.</a>
@@ -256,6 +314,24 @@ position: absolute;
 		 <h3 class = "he3">Villanelle: A poem that is made up of five tercets followed by a quatrain, built on refrians.</h3>
 		 <p class = "pa">A refrain is a line that repeats throughout the poem. Villanelles refrains and a rhyme pattern that flows perfectly if written properly. A popular villanelle is "Do not go gentle into that good night", by Dylan Thomas. Click <a href = "https://poets.org/text/villanelle-poetic-form">here</a> to learn more about Villanelles.</p>
 	<div>
+</div>
+<div id = "about">
+	 <h1>Poetry 30/30 About Page</h1>
+<p>April is national poetry month. Understand poetry better with prompts by <a target="_blank" href= "http://3030poetry.com">Word X Word</a> and formats by Mr. Capley. <br><br><a href = "https://poetry3030.com/">poetry3030.com</a> was made for your convenience- enjoy!<br><br>Every day, a new quote is posted in relation to the poem's topic.<br><br>The website is quickly approaching the end of beta, so expect this design to be used in the 2019-2020 school year.</p>		 
+		 </div>
+<div id = "format">
+	    <h1>Daily Format Breifing</h1>
+	    <p>Click the button below to show the description for today's format.</p>
+	    
+  <div id = "container1">
+  <p id="poem" onclick="myFunction()"><span id = "b1">Click Here To Select Poetry Format</span>
+  </p>
+  </div>
+<p align="center" id = "para"><br>Come back in April! If you click the link/picture you will be redirected to my 404 page. Click <a class = "ll" href = "https://poetry3030.com/lklf" target="_blank">here</a> to learn more about ---. You can also use the image below as a reference. <br><br><a target="_blank" href = "https://poetry3030.com/sdlf"><img src = "https://poetry3030.com/404.html" height="250px" width="375px"></a></p>		  
+		  </div>
+<div id = "topics">
+		  
+		  </div>
 	<footer><span id="footer"> Copyright &copy; <spa id="cYear"></span>, poetry3030.com</span></footer>
     </section>
 <p align="center"> 
@@ -475,6 +551,10 @@ var s;
    for (s = 0; s < sideN.length; s++){
     sideN[s].style.background = "white";			   
   }
+var a2; 
+   for (a2 = 0; a2 < cardT.length; a2++){
+    cardT[a2].style.background = "white";			   
+  }	
 }		
 				 				    
 				    
@@ -552,6 +632,10 @@ var s;
    for (s = 0; s < sideN.length; s++){
     sideN[s].style.background = "white";			   
   }
+var a2; 
+   for (a2 = 0; a2 < cardT.length; a2++){
+    cardT[a2].style.background = "white";			   
+  }					      
 }				    
 				    
 if(ldadd == 1){
@@ -605,7 +689,10 @@ var z;
    for (z = 0; z < sideN.length; z++){
     sideN[z].style.background = "#1b1b1b";			   
   }	
-				 
+var a2; 
+   for (a2 = 0; a2 < cardT.length; a2++){
+    cardT[a2].style.background = "black";			   
+  }					 
 }					   				  				    
 }
 var d = new Date();
