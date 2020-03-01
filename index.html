@@ -312,25 +312,7 @@ img {
 }
 .buttonm{
 text-align:center;
- }
-#homepage{
-display:block;	    
-	    }
-#descriptions{
-display:none;	    
-	    }
-#about{
-display:none;	    
-	    }
-#format{
-display:none;	    
-	    }
-#topics{
-display:none;	    
-	    }
-#selector{
-display:none;	    
-	    }    
+	    } 
     </style>
   </head>
   <body>
@@ -447,18 +429,17 @@ display:none;
     </p>
 <script src="jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 	
-<script>
-$(document).ready(function(){
-  $("#poem").click(function(){
-	    $("#para").hide();
-    $("#para").slideDown(800);
-  });
-});									    
-									    </script>
+
 <script>	
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
-};	
+};
+document.getElementById("homepage").style.display = "block";
+document.getElementById("descriptions").style.display = "none";	
+document.getElementById("about").style.display = "none";	
+document.getElementById("format").style.display = "none";	
+document.getElementById("topics").style.display = "none";	
+document.getElementById("selector").style.display = "none";							       
 function homepage(){
 document.getElementById("homepage").style.display = "block";
 document.getElementById("descriptions").style.display = "none";	
@@ -1449,11 +1430,8 @@ text("30/30", thirty.x, thirty.y-tlength);
 	}
 	}
 		       function myFunction() {
- document.getElementById("b1").innerHTML = "Come Back Later!";
- document.getElementById("poem").innerHTML = "Come Back Later!";
  document.getElementById("para").style.visibility = "visible"; 
  document.getElementById("para").style.textAlign = "center"; 
- document.title = 'Cya Soon';
 
 }
 </script>
