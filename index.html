@@ -321,18 +321,18 @@ text-align:center;
 <nav>
 <a id="menu-icon"></a>
 <ul>
-<li><a onclick="homepage()">Home</a></li>
-<li><a onclick="about()">About</a></li>
-<li><a onclick="format()">Daily Format</a></li>
-<li><a onclick="topics()">All Topics</a></li>
-<li><a onclick="selector()">Random Format Selector</a></li>
+<li><a onclick="pageSwitching(homepage)">Home</a></li>
+<li><a onclick="pageSwitching(about)">About</a></li>
+<li><a onclick="pageSwitching(format)">Daily Format</a></li>
+<li><a onclick="pageSwitching(topics)">All Topics</a></li>
+<li><a onclick="pageSwitching(selector)">Random Format Selector</a></li>
 </ul>
 </nav>
 </header>
     <section>
 <div class="sidenav">
   <a href="mailto:juliandominguez0415@gmail.com">Report Errors</a>
-  <a onclick="descriptions()">All Format Descriptions</a>
+  <a onclick="pageSwitching(descriptions)">All Format Descriptions</a>
   <a onclick="lightMode()" id = "ldmode"></a>
 </div>
 <div id = "homepage">
@@ -434,9 +434,10 @@ text-align:center;
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
 };
-var pageSwitching = "none";
 								
-if(pageSwitching == "homepage"){
+			      
+function pageSwitching(page){
+if(page == "homepage"){
 document.getElementById("homepage").style.display = "block";
 document.getElementById("descriptions").style.display = "none";	
 document.getElementById("about").style.display = "none";	
@@ -444,7 +445,7 @@ document.getElementById("format").style.display = "none";
 document.getElementById("topics").style.display = "none";	
 document.getElementById("selector").style.display = "none";							   
 }
-if(pageSwitching == "descriptions"){
+if(page == "descriptions"){
 document.getElementById("descriptions").style.display = "block";
 document.getElementById("homepage").style.display = "none";
 document.getElementById("about").style.display = "none";	
@@ -452,7 +453,7 @@ document.getElementById("format").style.display = "none";
 document.getElementById("topics").style.display = "none";	
 document.getElementById("selector").style.display = "none";							       
 }	
-if(pageSwitching == "about"){
+if(page == "about"){
 document.getElementById("about").style.display = "block";
 document.getElementById("homepage").style.display = "none";
 document.getElementById("descriptions").style.display = "none";		
@@ -460,7 +461,7 @@ document.getElementById("format").style.display = "none";
 document.getElementById("topics").style.display = "none";	
 document.getElementById("selector").style.display = "none";							
 }	
-if(pageSwitching == "format"){
+if(page == "format"){
 document.getElementById("format").style.display = "block";
 document.getElementById("homepage").style.display = "none";
 document.getElementById("descriptions").style.display = "none";	
@@ -468,7 +469,7 @@ document.getElementById("about").style.display = "none";
 document.getElementById("topics").style.display = "none";	
 document.getElementById("selector").style.display = "none";							 
 }	
-if(pageSwitching == "topics"){
+if(page == "topics"){
 document.getElementById("topics").style.display = "block";
 document.getElementById("homepage").style.display = "none";
 document.getElementById("descriptions").style.display = "none";	
@@ -476,33 +477,16 @@ document.getElementById("about").style.display = "none";
 document.getElementById("format").style.display = "none";		
 document.getElementById("selector").style.display = "none";							 
 }
-if(pageSwitching == "selector"){
+if(page == "selector"){
 document.getElementById("selector").style.display = "block";
 document.getElementById("homepage").style.display = "none";
 document.getElementById("descriptions").style.display = "none";	
 document.getElementById("about").style.display = "none";	
 document.getElementById("format").style.display = "none";	
 document.getElementById("topics").style.display = "none";							   
-}	
-			      
-function homepage(){
-pageSwitching = "homepage";							  						  
+}							
 }
-function descriptions(){
-pageSwitching = "descriptions";						      
-}
-function about(){
-pageSwitching = "about";						      
-}	
-function format(){
-pageSwitching = "format";							      
-}
-function topics(){
-pageSwitching = "topics";			
-}	
-function selector(){
-pageSwitching = "selector";						      
-}							       
+							       
     var sketchProc2 = function(processingInstance2) {
      with (processingInstance2) {
         size(600, 400); 
