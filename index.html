@@ -430,17 +430,19 @@ text-align:center;
       <canvas id="mycanvas"></canvas> 
     </p>
 <script src="jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 									    
-<script>	
-window.onload = function() {
-document.getElementById("mycanvas").style.visibility = "hidden";
-};		       
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 	
+<script>
 $(document).ready(function(){
   $("#poem").click(function(){
 	    $("#para").hide();
     $("#para").slideDown(800);
   });
-});
+});									    
+									    </script>
+<script>	
+window.onload = function() {
+document.getElementById("mycanvas").style.visibility = "hidden";
+};		       
     var sketchProc2 = function(processingInstance2) {
      with (processingInstance2) {
         size(600, 400); 
