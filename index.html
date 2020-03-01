@@ -239,7 +239,81 @@ position: absolute;
 img {
 	width: 600px;
 	height: 200px;
-}	
+}
+   #ccc1{
+        margin: 10px auto 20px;
+    display: block;
+    background-color: white;
+      width: 1050px;
+    }
+      a.ema{
+      color:black;
+      font-weight: bold;
+     }    
+.card{
+  background-color: white;
+  background-repeat: repeat;
+  background-size: cover;
+  width: 400px;
+  margin: 10px auto 20px;
+ display: block;
+    }
+      .text{
+     text-align:center;
+    color: black;
+     width: 400px;
+      }
+	#text1{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text2{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text3{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text4{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text5{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text6{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	    
+	    #orod{
+	    color: red;
+		text-align: center;
+	    }
+.button {
+  background-color: #20639B;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align:center;
+  margin:auto;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.buttonm{
+text-align:center;
+ }
+
     </style>
   </head>
   <body>
@@ -330,9 +404,27 @@ img {
 <p align="center" id = "para"><br>Come back in April! If you click the link/picture you will be redirected to my 404 page. Click <a class = "ll" href = "https://poetry3030.com/lklf" target="_blank">here</a> to learn more about ---. You can also use the image below as a reference. <br><br><a target="_blank" href = "https://poetry3030.com/sdlf"><img src = "https://poetry3030.com/404.html" height="250px" width="375px"></a></p>		  
 		  </div>
 <div id = "topics">
-		  
-		  </div>
-	<footer><span id="footer"> Copyright &copy; <spa id="cYear"></span>, poetry3030.com</span></footer>
+        <h1>All Topics</h1>
+	    <p>You can use this tool to find the topic for a poem in a day in April.</p>
+
+	<div class = "buttonm"><button id = "prev" class="button" onclick="subFunction()">Prev</button>
+	<button id = "datemid" class="button">April 1st, 2019</button>
+	<button id = "next" class="button" onclick="addFunction()">Next</button></div>
+	   
+<div id = "allPoetry30">
+ <span id = "DAY1" class = "card"><h2 id = "text1">Poem Topic:</h2><h3 id = "text2"></h3><h3 id = "text3"></h3><p id = "text4"></p><p id = "orod"></p><h6 id = "text6">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a> and Mr.Capley</h6></span>
+	    </div>
+<br><br><br><br><br>		  
+ </div>
+ <div id = selector>
+     	    <h1>Random Format Selector</h1>
+	    <p>Use this tool to select a random format. This is not the format for the day.</p>
+
+    <p align="center"> 
+      <canvas id="mycanvas2"></canvas> 
+    </p>
+ </div>
+	<footer><span id="footer"> Copyright &copy; <span id="cYear"></span>poetry3030.com</span></footer>
     </section>
 <p align="center"> 
       <canvas id="mycanvas"></canvas> 
@@ -344,7 +436,116 @@ window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
 };		       
 
+    var sketchProc2 = function(processingInstance2) {
+     with (processingInstance2) {
+        size(600, 400); 
+        frameRate(60);
+        //variables {
+var a = "Quatrain";
+var b = "Sonnet";
+var c = "Haiku";
+var d = "Cacophony";
+var e = "Pantoum";
+var f = "Sestina";
+var g = "Elegy";
+var h = "Ode";
+var i = "Ghazal";
+var j = "Terza Rima";
+var k = "Prose Poem";
+var l = "Tercet";
+var m = "Villanelle";
+var n = "Free Verse";
+var y = height-height-60;
+var y1 = height/2;
+var ystate = 0;
+//}
+var qw = "Click to Generate";
+var qv = "Click for random format"
+var o = 0;
+mouseClicked = function(){
+o = Math.round(random(0, 13));
+y = width-width-60;
+ystate += 1;
+y1 += 1000000;
+};
+draw = function() {
+if(ystate === 1){
+    y+=5;
+}
+if(y >= height/2){
+    ystate = 0;
+    y = height/2;
+}
+if(ystate >= 2){
+    ystate = 1;
+}
 
+     background(249);
+    textAlign(CENTER, CENTER);
+noFill();
+rect(width/2-250, y1-80/2, 500, 80);
+    fill(76, 143, 236);
+    textSize(60);
+text(qw, width/2, y);
+textSize(40);
+text(qv, width/2, y1);
+
+//The values {
+    if(o === 0){
+        qw = a;
+    }
+    if(o === 1){
+        qw = b;
+    }
+    if(o === 2){
+        qw = c;
+    }
+    if(o === 3){
+        qw = d;
+    }
+    if(o === 4){
+        qw = e;
+    }
+    if(o === 5){
+       qw = f;
+    }
+     if(o === 6){
+       qw = g;
+    }
+    if(o === 7){
+        qw = h;
+    }
+     if(o === 8){
+       qw = i;
+    }
+    if(o === 9){
+       qw = j;
+    }
+    if(o === 10){
+        qw = k;
+    }
+    if(o === 11){
+      qw = l;
+    }
+    if(o === 12){
+      qw = m;
+    }
+    if(o === 13){
+        qw = n;
+    }
+//}
+
+};
+
+
+
+
+
+    }};
+
+    var canvas2 = document.getElementById("mycanvas2"); 
+
+    var processingInstance2 = new Processing(canvas2, sketchProc2); 
 									   
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
