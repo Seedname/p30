@@ -234,101 +234,107 @@ p {
      with (processingInstance) {
         size(600, 400); 
         frameRate(60);
-        //variables {
-var a = "Quatrain";
-var b = "Sonnet";
-var c = "Haiku";
-var d = "Cacophony";
-var e = "Pantoum";
-var f = "Sestina";
-var g = "Elegy";
-var h = "Ode";
-var i = "Ghazal";
-var j = "Terza Rima";
-var k = "Prose Poem";
-var l = "Tercet";
-var m = "Villanelle";
-var n = "Free Verse";
-var y = height-height-60;
-var y1 = height/2;
-var ystate = 0;
-//}
-var qw = "Click to Generate";
-var qv = "Click for random format"
-var o = 0;
-mouseClicked = function(){
-o = Math.round(random(0, 13));
-y = width-width-60;
-ystate += 1;
-y1 += 1000000;
+//This is for my website. You can use it (just give credit).
+//If you want a random format, just click the screen
+var word = function(word){
+this.word = word.split("");
+this.x = 0;
+this.a = 40;
 };
-draw = function() {
-if(ystate === 1){
-    y+=5;
-}
-if(y >= height/2){
-    ystate = 0;
-    y = height/2;
-}
-if(ystate >= 2){
-    ystate = 1;
-}
-
-     background(249);
+word.prototype.display = function(){
+background(255, 255, 255);
+this.x += 3;
+for(var i = 0; i < this.word.length; i++){
+pushMatrix();
+translate(0, height/3);
     textAlign(CENTER, CENTER);
-noFill();
-rect(width/2-250, y1-80/2, 500, 80);
-    fill(76, 143, 236);
-    textSize(60);
-text(qw, width/2, y);
-textSize(40);
-text(qv, width/2, y1);
+    textSize(85);
+    fill(0, 0, 0);
+    text(this.word[i], this.x+(i*50)+3, this.a*sin(this.x+i*50));
+    fill(this.a*sin(this.x+i*50)+height/25, this.a*sin(this.x+i*50)+height/3, ((this.x+(i*50))));
+    text(this.word[i], this.x+(i*50), this.a*sin(this.x+i*50));
+popMatrix();
+if(this.x >= width){
+    this.x = -this.x+(i*50)+150;
+}
 
-//The values {
-    if(o === 0){
-        qw = a;
-    }
-    if(o === 1){
-        qw = b;
-    }
-    if(o === 2){
-        qw = c;
-    }
-    if(o === 3){
-        qw = d;
-    }
-    if(o === 4){
-        qw = e;
-    }
-    if(o === 5){
-       qw = f;
-    }
-     if(o === 6){
-       qw = g;
-    }
-    if(o === 7){
-        qw = h;
-    }
-     if(o === 8){
-       qw = i;
-    }
-    if(o === 9){
-       qw = j;
-    }
-    if(o === 10){
-        qw = k;
-    }
-    if(o === 11){
-      qw = l;
-    }
-    if(o === 12){
-      qw = m;
-    }
-    if(o === 13){
-        qw = n;
-    }
-//}
-
+}
+};
+var quatrain = new word("QUATRAIN");
+var sonnet = new word("SONNET");
+var haiku = new word("HAIKU");
+var cacophony = new word("CACOPHONY");
+var pantoum = new word("PANTOUM");
+var sestina = new word("SESTINA");
+var elegy = new word("ELEGY");
+var ode = new word("ODE");
+var ghazal = new word("GHAZAL");
+var terza = new word("TERZA RIMA");
+var prose = new word("PROSE POEM");
+var tercet = new word("TERCET");
+var villanelle = new word("VILLANELLE");
+var free = new word("FREE VERSE");
+var number = round(random(0, 13));
+draw = function() {
+if(number === 0){
+    quatrain.display();
+}
+if(number === 1){
+    sonnet.display();
+}
+if(number === 2){
+    haiku.display();
+}
+if(number === 3){
+    cacophony.display();
+}
+if(number === 4){
+    pantoum.display();
+}
+if(number === 5){
+    sestina.display();
+}
+if(number === 6){
+    elegy.display();
+}
+if(number === 7){
+    ode.display();
+}
+if(number === 8){
+    ghazal.display();
+}
+if(number === 9){
+    terza.display();
+}
+if(number === 10){
+    prose.display();
+}
+if(number === 11){
+    tercet.display();
+}
+if(number === 12){
+    villanelle.display();
+}
+if(number === 13){
+    free.display();
+}
+};
+mouseClicked = function(){
+ number = round(random(0, 13));
+ quatrain.x = 0;
+ sonnet.x = 0;
+ haiku.x = 0;
+ cacophony.x = 0;
+ pantoum.x = 0;
+ sestina.x = 0;
+ elegy.x = 0;
+ ode.x = 0;
+ ghazal.x = 0;
+ terza.x = 0;
+ prose.x = 0;
+ tercet.x = 0;
+ villanelle.x = 0;
+ free.x = 0;
 };
 
 
