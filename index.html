@@ -317,38 +317,7 @@ popMatrix();
         
     }};
 
-    var canvas = document.getElementById("mycanvas"); 
-    var processingInstance = new Processing(canvas, sketchProc); 
-    var sketchProc1 = function(processingInstance1) {
-     with (processingInstance1) {
-        size(200, 80); 
-        frameRate(60);
-textSize(30);
-var ptext = "Poetry";
-var plength = textWidth(ptext);
-var poetry = new PVector(width-width-plength, height-height+80/2);
-var thirty = new PVector(width-width+200/2+45, height-height);
-draw = function() {
-    textAlign(CENTER, CENTER);
-background(255, 255, 255);
- fill(76, 156, 241);
- textSize(30);
-if(poetry.x <= width-width+100/2){
-    poetry.x +=1;
-}
-var tlength = textAscent();
-if(thirty.y-tlength <= width-width+80/2){
-    thirty.y +=0.5;
-}
- text(ptext, poetry.x, poetry.y);
 
-text("30/30", thirty.x, thirty.y-tlength);
-};
-    }};
-
-    var canvas1 = document.getElementById("mycanvas1"); 
-
-    var processingInstance1 = new Processing(canvas1, sketchProc1); 
  var dat = new Date();
  var ms = dat.getMilliseconds();
 						   
@@ -633,6 +602,42 @@ var z;
 				 
 }					   				  				    
 }
+					    var sketchProc1 = function(processingInstance1) {
+     with (processingInstance1) {
+        size(200, 80); 
+        frameRate(60);
+textFont(createFont("times new roman"), 40);
+var ptext = "Poetry";
+var plength = textWidth(ptext);
+var poetry = new PVector(width-width-plength, height-height+80/2);
+var thirty = new PVector(width-width+200/2+50, height-height);
+draw = function() {
+    textAlign(CENTER, CENTER);
+if(ldadd === 0){		   
+background(255, 255, 255);
+ fill(34, 98, 173);;
+} else{
+background(27, 27, 27);
+ fill(70, 102, 255);
+		    }
+	
+textFont(createFont("times new roman"), 40);
+if(poetry.x <= width-width+100/2){
+    poetry.x +=1;
+}
+var tlength = textAscent();
+if(thirty.y-tlength <= width-width+80/2){
+    thirty.y +=0.5;
+}
+ text(ptext, poetry.x, poetry.y);
+
+text("30/30", thirty.x, thirty.y-tlength);
+};
+    }};
+
+    var canvas1 = document.getElementById("mycanvas1"); 
+
+    var processingInstance1 = new Processing(canvas1, sketchProc1); 	
 var d = new Date();
 document.getElementById("cYear").innerHTML = d.getFullYear();					 
 </script>
