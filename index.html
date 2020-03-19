@@ -187,7 +187,54 @@ position: absolute;
   z-index: 100;
   opacity: 0.5;
   }
-	
+.card{
+  background-color: white;
+  background-repeat: repeat;
+  background-size: cover;
+  width: 400px;
+  margin: 10px auto 20px;
+ display: block;
+    }
+      .text{
+     text-align:center;
+    color: black;
+     width: 400px;
+      }
+	#text1{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text2{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text3{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text4{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text5{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	#text6{
+	text-align:center;
+        color: black;
+        width: 400px;
+	    }
+	    
+	    #orod{
+	    color: red;
+		text-align: center;
+	    }	
     </style>
   </head>
   <body>
@@ -212,7 +259,8 @@ position: absolute;
   <a onclick="lightMode()" id = "ldmode"></a>
 </div>
 	    <h1 class = "he1">Poetry 30/30 Home Page</h1>
-	    <p class = "pa">Welcome to the Poetry3030.com's homepage! During the month of April, the day's format will be posted here.</p>
+	    <p class = "pa">Welcome to the Poetry3030.com's homepage! Will you take on the 30 day challenge?</p>
+	    <span id = "DAY1" class = "card"><h2 id = "text1">Poem Topic:</h2><h3 id = "text2"></h3><h3 id = "text3"></h3><p id = "text4"></p><p id = "orod"></p><h6 id = "text6">Sources: <a target= "_blank" href = "http://3030poetry.com/">Word X Words Poetry 30/30</a></h6></span>
 	 <div id = "aformatd">
 		 <h1 class = "he1">Format Descriptions</h1>
 		 <p class = "pa">This section of the home page allows you to view descriptions and examples of the formats throughout the month quickly and easily. If you still didn't understand the format of the day, click <a href = "https://poetry3030.com/p30-1">here.</a>
@@ -319,12 +367,7 @@ popMatrix();
 
 
   var datt = new Date();
-  var n = datt.getTime();
-if(n >= 1584634344393+120000){
-	console.log("Two minutes passed");					
-} else {
-	console.log("nope, not yet");	
-}						   
+  var n = datt.getTime();						   
 if(n >= 1585713600000){
 //April 1st		   
 }
