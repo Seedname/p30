@@ -251,7 +251,7 @@ var y = this.amplitude*sin(radians(this.x+i*this.spread));
    textSize(100);
     fill(0, 0, 0);
     text(this.word[i], this.x+(i*this.spread)+3, y);
-    fill(y+height/25, y+height/3, this.x+y);
+    fill(y+height/25, y+height/3, (255*(this.x/width))+y);
     text(this.word[i], this.x+(i*this.spread), y);
 popMatrix();
 if(this.x >= width){
