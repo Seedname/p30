@@ -239,7 +239,8 @@ p {
 var word = function(word){
 this.word = word.split("");
 this.x = 0;
-this.a = 40;
+this.amplitude = 40;
+this.spread = 55;
 };
 word.prototype.display = function(){
 background(255, 255, 255);
@@ -247,17 +248,17 @@ this.x += 3;
 for(var i = 0; i < this.word.length; i++){
 pushMatrix();
 translate(0, height/3);
+var y = degrees(this.amplitude*sin(this.x+i*this.spread));
     textAlign(CENTER, CENTER);
-    textSize(85);
+   textSize(100);
     fill(0, 0, 0);
-    text(this.word[i], this.x+(i*50)+3, this.a*sin(this.x+i*50));
-    fill(this.a*sin(this.x+i*50)+height/25, this.a*sin(this.x+i*50)+height/3, ((this.x+(i*50))));
-    text(this.word[i], this.x+(i*50), this.a*sin(this.x+i*50));
+    text(this.word[i], this.x+(i*this.spread)+3, y);
+    fill(y+height/25, y+height/3, this.x+y);
+    text(this.word[i], this.x+(i*this.spread), y);
 popMatrix();
 if(this.x >= width){
-    this.x = -this.x+(i*50)+150;
+    this.x = -this.x+(i*this.spread)+150;
 }
-
 }
 };
 var quatrain = new word("QUATRAIN");
@@ -336,7 +337,6 @@ mouseClicked = function(){
  villanelle.x = 0;
  free.x = 0;
 };
-
 
 
 
