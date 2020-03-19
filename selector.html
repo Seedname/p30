@@ -234,8 +234,6 @@ p {
      with (processingInstance) {
         size(600, 400); 
         frameRate(60);
-//This is for my website. You can use it (just give credit).
-//If you want a random format, just click the screen
 var word = function(word){
 this.word = word.split("");
 this.x = 0;
@@ -247,8 +245,8 @@ background(255, 255, 255);
 this.x += 3;
 for(var i = 0; i < this.word.length; i++){
 pushMatrix();
-translate(0, height/3);
-var y = degrees(this.amplitude*sin(this.x+i*this.spread));
+translate(0, height/2);
+var y = this.amplitude*sin(radians(this.x+i*this.spread));
     textAlign(CENTER, CENTER);
    textSize(100);
     fill(0, 0, 0);
@@ -337,6 +335,7 @@ mouseClicked = function(){
  villanelle.x = 0;
  free.x = 0;
 };
+
 
 
 
