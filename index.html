@@ -65,15 +65,17 @@ nav {
 	    font-size: 25px;
 	    }
 #menu-icon {
-	display: hidden;
 	width: 80px;
 	height: 80px;
 	background: #4C8FEC url("https://poetry3030.com/meico.png") center;
       }
 a:hover#menu-icon {
-	background-color: #f9f9f3;
+	background-color: rgb(128, 128, 128);
 	border-radius: 4px 4px 0 0;
 }
+	#menu-icon {
+		display:inline-block;
+	}
 ul {
 	list-style: none;
 }
@@ -450,7 +452,7 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");	
-	
+var a_list = document.querySelectorAll('nav ul');	
 					     
 if(ldadd == 0){
  document.getElementById("ldmode").innerHTML = "Activate Dark Mode";
@@ -464,7 +466,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-					     
+var a_list = document.querySelectorAll('nav ul');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = "#1B1B1B";
+}
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -520,7 +526,7 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");		
-					     
+var a_list = document.querySelectorAll('nav ul');					     
 					   			    
 				   	
 if(ldadd == 0){
@@ -535,7 +541,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-					     
+var a_list = document.querySelectorAll('nav ul');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = "#1B1B1B";
+}
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -583,7 +593,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");	
-					     
+var a_list = document.querySelectorAll('nav ul');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = "#F9F9F9";
+}
 var i;					 
   for (i = 0; i < para.length; i++){
     para[i].style.color = "white";
