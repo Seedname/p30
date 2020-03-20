@@ -327,7 +327,9 @@ var today = new Date();
 var dd = today.getDate(); 
 var mm = today.getMonth()+1; 
 var yyyy = today.getFullYear(); 
-							       
+
+document.getElementById("datemid").innerHTML = mm + "/" + dd + "/" + yyyy;
+							   
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
 /*									   
@@ -387,16 +389,14 @@ if(n >= 1584636808186+300000){
 document.getElementById("text2").innerHTML = "[Insert Prompt Here]";
 document.getElementById("text3").innerHTML = "Format: [Insert Format Here]";
 document.getElementById("text4").innerHTML = "Poetry 30/30 Is Close";
-document.getElementById("orod").innerHTML = "[Insert Requirements Here]";
-document.getElementById("datemid").innerHTML = "Not April 1st yet...";							     
+document.getElementById("orod").innerHTML = "[Insert Requirements Here]";					     
 }				       
 if(n >= 1585713600000){
 //April 1st	
 document.getElementById("text2").innerHTML = "[Insert Prompt Here]";
 document.getElementById("text3").innerHTML = "Format: Quatrian";
 document.getElementById("text4").innerHTML = "Welcome to Poetry 30/30 2020!";
-document.getElementById("orod").innerHTML = "[Insert Requirements Here]";
-document.getElementById("datemid").innerHTML = "April 1st, 2020";							      
+document.getElementById("orod").innerHTML = "[Insert Requirements Here]";						      
 }
 if(n >= 1585713600000+(86400000*1)){
 //April 2nd	
