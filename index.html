@@ -323,7 +323,11 @@ position: absolute;
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
 };		       
-									   
+var today = new Date(); 
+var dd = today.getDate(); 
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear(); 
+							       
         var sketchProc = function(processingInstance) {
      with (processingInstance) {
 /*									   
