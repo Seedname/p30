@@ -167,12 +167,23 @@ p {
   color: #f2f3f4;
    cursor: pointer;
 }
+footer{
+color: #a19f9f;
+font-size: 10px;	
+}    
+#mycanvas{
+  left: 0px;
+  top: 0px;
+position: absolute;
+  z-index: 100;
+  opacity: 0.5;
+  }
     </style>
   </head>
   <body>
 
 <header>
-<a href="https://poetry3030.com" id="logo">Poetry 30/30<br><br>About</a>
+<a href="https://poetry3030.com" id="logo"><canvas id="mycanvas1"></canvas></a>
 <nav>
 <a id="menu-icon"></a>
 <ul>
@@ -186,7 +197,7 @@ p {
 <section>
 <div class="sidenav">
   <a href="mailto:juliandominguez0415@gmail.com">Contact Me</a>
-  <a href="https://poetry3030.com/p30-4">All Format Descriptions</a>
+  <a href="https://poetry3030.com#aformatd">All Format Descriptions</a>
   <a href="http://3030poetry.com/">Source</a>
   <a onclick="lightMode()" id = "ldmode"></a>	
 </div>
@@ -196,9 +207,57 @@ p {
  
 
     </section> 
-
+<footer><span id="footer"> Copyright &copy; <spa id="cYear"></span>, poetry3030.com</span></footer>
   </body>
-	    <script type="text/javascript">
+	    <script>
+window.onload = function() {
+document.getElementById("mycanvas").style.visibility = "hidden";
+};
+        var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+/*									   
+ var elmnt = document.body;
+  var pageW = elmnt.scrollWidth;
+  var pageH = elmnt.scrollHeight;
+  */
+        size(screen.width, screen.height); 
+        frameRate(60);
+var angle = -90;
+var rangle = 0;
+var r = 35;
+var cr = 255;
+var cg = 255;
+var cb = 255;
+background(255);
+draw = function() {
+    rangle+=1;
+    if(angle >= -90 && angle < 270){
+    angle+=3;
+    cr -= 2;
+    cg -= 2;
+    cb -= 2;
+    } else if(angle >= 270 && angle < 270+360){
+        angle += 3;
+        cr += 2;
+        cg += 2;
+        cb += 2;
+    } else{
+        angle = -90;
+        
+    }
+var position = new PVector(r*cos(angle*(180/Math.PI)), r*sin(angle*(180/Math.PI)));
+pushMatrix();
+translate(width/2, height/2);
+rotate(rangle);
+noStroke();
+fill(cr, cg, cb);
+ellipse(position.x, position.y, 10, 10);
+popMatrix();
+
+};
+
+        
+    }};
 var ldadd = 0;	
 document.getElementById("ldmode").addEventListener("click", lightMode);
 var head1 = document.getElementsByTagName("h1");
@@ -209,7 +268,7 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");	
-	
+var a_list = document.querySelectorAll('nav ul');	
 					     
 if(ldadd == 0){
  document.getElementById("ldmode").innerHTML = "Activate Dark Mode";
@@ -223,7 +282,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-					     
+var a_list = document.querySelectorAll('nav ul');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = "#F9F9F9";
+}
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -238,7 +301,7 @@ var n;
 }				    
 var o;				     
   for (o = 0; o < head3.length; o++){
-    head3[o].style.color = "#e6e884";			 
+    head3[o].style.color = "#FFDF00";			 
 }
 var p;				     
   for (p = 0; p < head6.length; p++){
@@ -256,14 +319,21 @@ var s;
    for (s = 0; s < sideN.length; s++){
     sideN[s].style.background = "white";			   
   }
+document.getElementById("text2").style.color = "#000000";
+document.getElementById("text3").style.color = "#000000";
+document.getElementById("text4").style.color = "#000000";							
+document.getElementById("orod").style.color = "#FF0000";
+document.getElementById("datemid").style.color = "#000000";						       
 }		
 				 				    
-				    
-				   
+					   
+
 				    
 				    
 function lightMode() {
+
 	ldadd += 0.5;
+				       
 	if(ldadd >= 2){
 	ldadd = 0;
 }
@@ -276,7 +346,7 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");		
-					     
+var a_list = document.querySelectorAll('nav ul');					     
 					   			    
 				   	
 if(ldadd == 0){
@@ -291,7 +361,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");
-					     
+var a_list = document.querySelectorAll('nav ul');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = "#F9F9F9";
+}
 var l;				     
   for (l = 0; l < para.length; l++){
     para[l].style.color = "black";				 
@@ -306,7 +380,7 @@ var n;
 }				    
 var o;				     
   for (o = 0; o < head3.length; o++){
-    head3[o].style.color = "#e6e884";			 
+    head3[o].style.color = "#FFDF00";			 
 }
 var p;				     
   for (p = 0; p < head6.length; p++){
@@ -324,6 +398,11 @@ var s;
    for (s = 0; s < sideN.length; s++){
     sideN[s].style.background = "white";			   
   }
+document.getElementById("text2").style.color = "#000000";
+document.getElementById("text3").style.color = "#000000";
+document.getElementById("text4").style.color = "#000000";							
+document.getElementById("orod").style.color = "#FF0000";
+document.getElementById("datemid").style.color = "#000000";						       
 }				    
 				    
 if(ldadd == 1){
@@ -339,7 +418,11 @@ var para = document.getElementsByTagName("p");
 var sideN = document.getElementsByClassName("sidenav");
 var headR = document.getElementsByTagName("header");
 var linkA = document.getElementsByTagName("a");	
-					     
+var a_list = document.querySelectorAll('nav ul');
+
+for (var i=0; i<a_list.length; i++) {
+    a_list[i].style.backgroundColor = "#1B1B1B";
+}
 var i;					 
   for (i = 0; i < para.length; i++){
     para[i].style.color = "white";
@@ -372,13 +455,52 @@ var z;
    for (z = 0; z < sideN.length; z++){
     sideN[z].style.background = "#1b1b1b";			   
   }	
-				 
+document.getElementById("text2").style.color = "#000000";
+document.getElementById("text3").style.color = "#000000";
+document.getElementById("text4").style.color = "#000000";							
+document.getElementById("orod").style.color = "#FF0000";
+document.getElementById("datemid").style.color = "#000000";					 
+}					   				  				    
 }
-					   
-				      
-				    
+ var sketchProc1 = function(processingInstance1) {
+     with (processingInstance1) {
+        size(200, 80); 
+        frameRate(60);
+textFont(createFont("times new roman"), 40);
+var ptext = "Poetry";
+var plength = textWidth(ptext);
+var poetry = new PVector(width-width-plength, height-height+80/2);
+var thirty = new PVector(width-width+200/2+50, height-height);
+draw = function() {
+    textAlign(CENTER, CENTER);
+if(ldadd === 0){		   
+background(255, 255, 255);
+ fill(34, 98, 173);;
+} else{
+background(27, 27, 27);
+ fill(70, 102, 255);
+		    }
+	
+textFont(createFont("times new roman"), 40);
+if(poetry.x <= width-width+100/2){
+    poetry.x +=1;
 }
-</script>
+var tlength = textAscent();
+if(thirty.y-tlength <= width-width+80/2){
+    thirty.y +=0.5;
+}
+ text(ptext, poetry.x, poetry.y);
+
+text("30/30", thirty.x, thirty.y-tlength);
+};
+    }};
+
+    var canvas1 = document.getElementById("mycanvas1"); 
+
+    var processingInstance1 = new Processing(canvas1, sketchProc1); 	
+var d = new Date();
+document.getElementById("cYear").innerHTML = d.getFullYear();	
+	</script>
 </html>
 
 
