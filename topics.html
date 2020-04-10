@@ -292,8 +292,6 @@ text-align:center;
 	 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
 	<script>
 	var adfun = 0;
-	document.getElementById("next").addEventListener("click", addFunction);
-	document.getElementById("prev").addEventListener("click", subFunction);
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
 document.getElementById("text3").innerHTML = "Format: <a href = 'https://poetry3030.com/#free'>Free Verse</a>";
@@ -722,10 +720,14 @@ document.getElementById("orod").innerHTML = "Minimum: 16 lines";
 	}
 	function addFunction(){
 	adfun += 0.5;
+		console.log("clickadd");
 	}
 	function subFunction(){
 	adfun -= 0.5;
+		console.log("clicksub");
 	}
+	document.getElementById("next").addEventListener("click", addFunction);
+	document.getElementById("prev").addEventListener("click", subFunction);
 window.onload = function() {
 document.getElementById("mycanvas").style.visibility = "hidden";
 };
