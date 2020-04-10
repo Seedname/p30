@@ -303,7 +303,7 @@ document.getElementById("orod").innerHTML = "Minimum: 16 lines";
 	function addFunction(){
 	adfun += 0.5;
 if(adfun > 59){
-	adfun = 0;
+	adfun = 59;
 	}	
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
@@ -730,7 +730,7 @@ document.getElementById("orod").innerHTML = "Minimum: 16 lines";
 	function subFunction(){
 	adfun -= 0.5;
 if(adfun < 0){
-	adfun = 59;
+	adfun = 0;
 	}
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
