@@ -292,9 +292,7 @@ text-align:center;
 	 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
 	<script>
 var adfun = 0;
-if(adfun > 59){
-	adfun = 0;
-	}	
+
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
 document.getElementById("text3").innerHTML = "Format: <a href = 'https://poetry3030.com/#free'>Free Verse</a>";
@@ -304,6 +302,9 @@ document.getElementById("orod").innerHTML = "Minimum: 16 lines";
 	}
 	function addFunction(){
 	adfun += 0.5;
+if(adfun > 59){
+	adfun = 0;
+	}	
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
 document.getElementById("text3").innerHTML = "Format: <a href = 'https://poetry3030.com/#free'>Free Verse</a>";
