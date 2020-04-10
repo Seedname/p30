@@ -292,7 +292,12 @@ text-align:center;
 	 <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
 	<script>
 var adfun = 0;
-		
+if(adfun > 59){
+	adfun = 0;
+	}
+if(adfun < 0){
+	adfun = 59;
+	}	
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
 document.getElementById("text3").innerHTML = "Format: <a href = 'https://poetry3030.com/#free'>Free Verse</a>";
@@ -722,15 +727,16 @@ document.getElementById("orod").innerHTML = "Minimum: 16 lines";
 	document.getElementById("orod").innerHTML = "";
 	document.getElementById("datemid").innerHTML = "April 30th, 2019";
 }
-	if(adfun >= 60){
-	adfun = 0;
-	}
-	if(adfun <= -1){
-	adfun = 59;
-	}
+
 	}
 	function subFunction(){
 	adfun -= 0.5;
+if(adfun > 59){
+	adfun = 0;
+	}
+if(adfun < 0){
+	adfun = 59;
+	}
 	if(adfun == 0){
 document.getElementById("text2").innerHTML = "Waiting";
 document.getElementById("text3").innerHTML = "Format: <a href = 'https://poetry3030.com/#free'>Free Verse</a>";
@@ -1151,12 +1157,6 @@ document.getElementById("orod").innerHTML = "Minimum: 16 lines";
 	document.getElementById("orod").innerHTML = "";
 	document.getElementById("datemid").innerHTML = "April 30th, 2019";
 }
-	if(adfun >= 60){
-	adfun = 0;
-	}
-	if(adfun <= -1){
-	adfun = 59;
-	}
 	}
 	document.getElementById("next").addEventListener("click", addFunction);
 	document.getElementById("prev").addEventListener("click", subFunction);
